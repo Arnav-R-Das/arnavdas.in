@@ -1,4 +1,5 @@
 Upload to GitHub:
+    git status
     git add .
     git commmit -m "message"
     git push
