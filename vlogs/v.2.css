@@ -1,0 +1,34 @@
+/*######################### BODY #########################*/
+
+
+.display-picture {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 2.5em;
+}
+
+@media (min-width: 768px) {
+  .display-picture {
+    justify-content: right;
+    display: flex;
+    align-items: center;
+    padding: 2.5em;
+  }
+}
+
+.bio {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 1em;
+}
+
+@media (min-width: 768px) {
+  .bio {
+    justify-content: left;
+    display: flex;
+    align-items: center;
+    margin: 1em;
+  }
+}
