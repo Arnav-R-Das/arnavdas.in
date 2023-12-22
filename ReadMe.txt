@@ -1,11 +1,13 @@
 Upload to GitHub:
-    git status
-    git add .
-    git commmit -m "message"
-    git push
+    (1)  cd arnavdas.in
+     -   git status
+    (2)  git add .
+    (3)  git commmit -m "message"
+    (4)  git push
 
 
 Upload to Web-Server:
-    ./server.sh
-    cd arnavdas.in
-    git pull
+    (1)  cd arnavdas.in 
+    (2)  ./server.sh
+    (3)  cd arnavdas.in
+    (4)  git pull
