@@ -40,6 +40,39 @@
 
 /*######################## FILTER ########################*/
 
+.navtab {
+  margin: 0px;
+  background-color: hsl(0, 0%, 4%);
+  padding-top: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 1em;
+  font-size: 1em;
+}
+
+a:active {
+  margin: 0.25em;
+  padding: 0.5em;
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(0, 0%, 4%);
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  margin: 0.25em;
+  padding: 0.5em;
+  background-color: hsl(0, 0%, 4%);
+  color: hsl(0, 0%, 96%);
+  text-decoration: none;
+}
+
+a:hover {
+  margin: 0.25em;
+  padding: 0.5em;
+  background-color: hsl(0, 0%, 16%);
+  color: hsl(0, 0%, 96%);
+  text-decoration: none;
+}
 
 
 
