@@ -1,18 +1,26 @@
 /*################### DISPLAY-PICTURE ####################*/
 
 .display-picture {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  padding: 2.5em;
+    justify-content: left;
+    display: flex;
+    align-items: center;
+    padding: 2em;
+}
+
+.display-picture img {
+    max-width: 100px;
 }
 
 @media (min-width: 768px) {
-  .display-picture {
-    justify-content: right;
-    display: flex;
-    align-items: center;
-    padding: 2.5em;
+    .display-picture {
+        justify-content: right;
+        display: flex;
+        align-items: center;
+        padding: 2.5em;
+    }
+
+    .display-picture img {
+      max-width: 150px;
   }
 }
 
@@ -21,19 +29,10 @@
 /*######################### BIO ##########################*/
 
 .bio {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  margin: 1em;
-}
-
-@media (min-width: 768px) {
-  .bio {
     justify-content: left;
     display: flex;
     align-items: center;
-    margin: 1em;
-  }
+    padding: 1em;
 }
 
 
@@ -41,37 +40,37 @@
 /*######################## FILTER ########################*/
 
 .navtab {
-  margin: 0px;
-  background-color: hsl(0, 0%, 4%);
-  padding-top: 0.5em;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: 1em;
-  font-size: 1em;
+    margin: 0px;
+    background-color: hsl(0, 0%, 4%);
+    padding-top: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    font-size: 1em;
 }
 
 a:active {
-  margin: 0.25em;
-  padding: 0.5em;
-  background-color: hsl(0, 0%, 96%);
-  color: hsl(0, 0%, 4%);
-  text-decoration: none;
+    margin: 0.25em;
+    padding: 0.5em;
+    background-color: hsl(0, 0%, 96%);
+    color: hsl(0, 0%, 4%);
+    text-decoration: none;
 }
 
 a:link, a:visited {
-  margin: 0.25em;
-  padding: 0.5em;
-  background-color: hsl(0, 0%, 4%);
-  color: hsl(0, 0%, 96%);
-  text-decoration: none;
+    margin: 0.25em;
+    padding: 0.5em;
+    background-color: hsl(0, 0%, 4%);
+    color: hsl(0, 0%, 96%);
+    text-decoration: none;
 }
 
 a:hover {
-  margin: 0.25em;
-  padding: 0.5em;
-  background-color: hsl(0, 0%, 16%);
-  color: hsl(0, 0%, 96%);
-  text-decoration: none;
+    margin: 0.25em;
+    padding: 0.5em;
+    background-color: hsl(0, 0%, 16%);
+    color: hsl(0, 0%, 96%);
+    text-decoration: none;
 }
 
 

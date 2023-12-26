@@ -31,6 +31,21 @@
                 type="text/css"
             >
 
+        <!-- GOOGLE FONTS -->
+            <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+            />
+            <link
+                rel="preconnect"
+                href="https://fonts.gstatic.com"
+                crossorigin
+            >
+            <link
+                href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+                rel="stylesheet"
+            >
+
         <!-- OTHER-->
             <meta 
                 charset="utf-8"
@@ -42,11 +57,19 @@
 
     <body
         style="
-            background-color:  hsl(0, 0%, 4%);
+            background-color: white;
             color: white;
             margin: 0px;
         "
     >
+
+        <!-- HOME -->
+            <div
+                class="p-3 mb-2 bg-black text-white  material-symbols-outlined"
+            >
+                
+                arrow_back_ios_new
+            </div>
 
         <!-- HEADER -->
             <div class="container-fluid">
@@ -59,10 +82,7 @@
                                 src="../images/favicon.png"
                                 alt="Arnav Das"
                                 title="Hellooooo!! It's me, Arnav :)"
-                                style="
-                                    border-radius: 50%;
-                                    max-width: 150px;
-                                "
+                                style="border-radius: 50%;"
                             >
 
                         </div>
@@ -71,7 +91,7 @@
                         <div class="col-12 col-md-6 bio">
 
                             <p>
-                                <b> ARNAV DAS </b>
+                                <b style="font-family: Lobster;"> ARNAV DAS </b>
                                 <br> &#x1F4CD Vadodara
                                 <br> &#x1F393 Computer Science Under-Grad
                             </p>
@@ -82,10 +102,96 @@
             </div>
 
         <!-- FILTER -->
+            <!--
+            <div class="container-fluid navtab">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        
+                        <div class="carousel-item active">
+                            <img src="..." class="d-block w-100" alt="ALL">
+                        </div>
+                        <div class="carousel-item active">
+                            <img src="..." class="d-block w-100" alt="ME">
+                        </div>
+                        <div class="row">
+
+                            <div  class="col-2 text-center material-symbols-outlined">
+                                    filter_list
+                            </div>
+                            <div class="col-2 text-center">
+                                <a
+                                    href="http://arnavdas.in"
+                                    target="_self"
+                                >
+                                    All
+                                </a>
+                            </div>
+                            <div class="col-2 text-center">
+                                <a
+                                    href="http://arnavdas.in"
+                                    target="_self"
+                                >
+                                    Me
+                                </a>
+                            </div>
+                        </div>
+
+                        <button
+                            class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carouselExample"
+                            data-bs-slide="prev"
+                        >
+                            <span
+                                class="carousel-control-prev-icon"
+                                aria-hidden="true">
+                            </span>
+                            <span
+                                class="visually-hidden"
+                            >
+                                Previous
+                            </span>
+                        </button>
+                        <button
+                            class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carouselExample"
+                            data-bs-slide="next"
+                        >
+                            <span
+                                class="carousel-control-next-icon"
+                                aria-hidden="true"
+                            >
+                            </span>
+                            <span
+                                class="visually-hidden"
+                            >
+                                Next
+                            </span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            -->
+
+        <!-- FILTER -->
             <div class="container-fluid navtab">
                 <div class="row">
 
-
+                    <div  class="col-1 text-center material-symbols-outlined">
+                        <button type="button" class="btn btn-outline-secondary" style="border-radius: 50%;">
+                            chevron_left
+                        </button>
+                    </div>
+                    <div class="col-2 text-center">
+                        <a
+                            href="http://arnavdas.in"
+                            target="_self"
+                        >
+                            All
+                        </a>
+                    </div>
                     <div class="col-2 text-center">
                         <a
                             href="http://arnavdas.in"
@@ -118,37 +224,10 @@
                             DPS
                         </a>
                     </div>
-                    <div class="col-2 text-center">
-                        <a
-                            href="http://arnavdas.in"
-                            target="_self"
-                        >
-                            HMT
-                        </a>
-                    </div>
-                    <div class="col-2 text-center">
-                        <a
-                            href="http://arnavdas.in"
-                            target="_self"
-                        >
-                            Mayo
-                        </a>
-                    </div>
-                    <div class="col-2 text-center">
-                        <a
-                            href="http://arnavdas.in"
-                            target="_self"
-                        >
-                            Ekta
-                        </a>
-                    </div>
-                    <div class="col-2 text-center">
-                        <a
-                            href="http://arnavdas.in"
-                            target="_self"
-                        >
-                            Football
-                        </a>
+                    <div  class="col-1 text-center material-symbols-outlined">
+                        <button type="button" class="btn btn-outline-secondary" style="border-radius: 50%;">
+                            chevron_right
+                        </button>
                     </div>
 
                 </div>
