@@ -1,0 +1,89 @@
+
+/************************** ROOT **************************/
+
+:root {
+
+    /* BOX MODEL: Height, Width, Padding, Border, Margin */
+
+        --standard-border-bottom: 1px;
+        --standard-margin: 15px;
+
+        --branding-height: 100px;
+
+        --navbar-height: 50px;
+        --navbar-top: calc(var(--branding-height) + var(--standard-border-bottom));
+
+        --carousel-height: calc(100vh - (var(--branding-height) + var(--standard-border-bottom) + var(--navbar-height) + (var(--standard-margin) * 2)));
+
+        --container-div-height: calc(100vh - (var(--standard-margin) * 2));
+
+        --footer-height: calc(100vh - (var(--branding-height) + var(--standard-border-bottom)));
+
+    /* COLOR PALLETE */
+
+        --color-border-bottom: hsl(0, 0%, 85%);
+
+}
+
+/************************** BODY **************************/
+
+body {
+    margin: 0;
+}
+
+/************************ BRANDING ************************/
+
+#branding {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    height: var(--branding-height);
+    width: 100%;
+    border-bottom: var(--standard-border-bottom) solid var(--color-border-bottom);
+
+    background-color: hsl(0, 0%, 100%);
+}
+
+/************************* NAVBAR *************************/
+
+#navbar {
+    position: sticky;
+    top: var(--navbar-top);
+    z-index: 1;
+
+    height: var(--navbar-height);
+
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 10px hsl(0, 0%, 85%);
+}
+
+/************************ CAROUSEL ************************/
+
+#carousel {
+    height: var(--carousel-height);
+    margin: var(--standard-margin) 0 var(--standard-margin);
+
+    background-color: hsl(0, 0%, 85%);
+}
+
+/*********************** CONTAINER ************************/
+
+#container div {
+    height: var(--container-div-height);
+    border-bottom: var(--standard-border-bottom) solid var(--color-border-bottom);
+    margin: var(--standard-margin) 125px var(--standard-margin);
+}
+
+#container div:last-child {
+    border-bottom: none;
+}
+
+/************************* FOOTER *************************/
+
+#footer {
+    height: var(--footer-height);
+
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}

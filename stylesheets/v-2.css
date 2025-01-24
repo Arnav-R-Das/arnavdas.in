@@ -1,0 +1,157 @@
+/************************** BODY **************************/
+
+body {
+    margin: 0;
+    font-family: 'Fredoka One', cursive;
+    color: hsl(0, 100%, 50%);
+}
+
+/************************* HEADER *************************/
+
+#all-header {
+    display: block;
+    margin: 0px;
+    background-color: hsl(0, 0%, 4%);
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+#all-header img {
+    display: block;
+    max-width: 150px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/************************* NAVTAB *************************/
+
+.navtab {
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    display: flex;
+    background-color: hsl(110, 100%, 50%);
+    top: 0;
+    margin: 0px;
+    padding: 1em;
+    font-size: 1em;
+}
+
+.nabtab > div {
+    background-color: white;
+    margin: 10px;
+    padding:20px;
+    font-size: 30px;
+}
+
+a:active {
+    background-color: hsl(0, 0%, 96%);
+    color: hsl(0, 0%, 4%);
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    margin: 0.25em;
+    padding: 0.5em;
+    background-color: hsl(0, 0%, 4%);
+    color: hsl(0, 0%, 96%);
+    text-decoration: none;
+}
+
+a:hover {
+    margin: 0.25em;
+    padding: 0.5em;
+    background-color: hsl(0, 0%, 16%);
+    color: hsl(0, 0%, 96%);
+    text-decoration: none;
+}
+
+/*********************** CONTENT-BOX **********************
+
+.all-content-box {
+    min-height: 100vh;
+    z-index: -1;
+    padding: 4em;
+}
+
+.all-content-box img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-me-content-box {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 45px;
+    z-index: -1;
+    margin: 0;
+    margin-left: 25%;
+    min-height: 100vh;
+    padding: 2.5em;
+    background-color: hsl(0, 0%, 10%);
+}*/
+
+/************************* JUMP-TO *************************
+
+.all-jump-to {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 45px;
+    height: 100vh;
+    width: 25%;
+    z-index: -1;
+    padding: 1.5em;
+    background-color: hsl(0, 0%, 5%);
+}
+
+.all-jump-to ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color:  hsl(0, 0%, 5%);
+}
+
+.all-jump-to li a {
+    display: block;
+    margin: 0;
+    padding: 10px 35px;
+    text-decoration: none;
+    background-color: hsl(0, 0%, 5%);
+    color:  hsl(0, 0%, 100%);
+}
+
+.all-jump-to li a:hover {
+    background-color:  hsl(0, 0%, 8%);
+    color:  hsl(0, 0%, 100%);
+}*/
+
+/************************* FOOTER *************************
+
+.all-footer {
+    margin: 0px;
+    background-color: hsl(0, 0%, 4%);
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 1em;
+}
+
+.all-footer img {
+    padding-right: 0.5em;
+    width: 5%;
+}
+
+.all-footer a:link, a:visited {
+    margin: 0.25em;
+    padding: 0.5em;
+    background-color: transparent;
+}
+
+.all-footer a:hover, a:active {
+    margin: 0.25em;
+    padding: 0.5em;
+    background-color: hsl(0, 0%, 96%);
+    background-size: 0.25em;
+}*/
