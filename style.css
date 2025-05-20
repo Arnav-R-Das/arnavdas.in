@@ -1,0 +1,206 @@
+/**************** GLOBAL ****************/
+
+:root{
+  --color-white:      hsl(0, 0%, 100%);
+  --color-light-gray: hsl(0, 0%,  85%);
+  --color-dark-gray:  hsl(0, 0%,  50%);
+  --color-black:      hsl(0, 0%,  10%);
+
+  --padding: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  background-color: var(--color-black);
+  color: var(--color-dark-gray);
+
+  -ms-overflow-style: none;  /* To hide scrollbar for IE and Edge */
+  scrollbar-width: none;     /* To hide scrollbar for Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;             /* To hide scrollbar for Chrome, Safari, and Opera */
+}
+
+body {
+  font-size: 100%;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-white);
+
+  /* outline: 1px solid white; */
+}
+
+h2 {
+  margin: 0 0 2rem 0;
+
+  font-size: 1.5rem;
+  color: var(--color-white);
+
+  /* outline: 1px solid red; */
+}
+
+h3 {
+  margin: 2rem 0 1rem 0;
+
+  font-size: 1rem;
+  color: var(--color-light-gray);
+  /* outline: 1px solid green; */
+}
+
+p {
+  margin: 0 0 1rem 0;
+
+  line-height: 1.5rem;
+  /* outline: 1px solid blue; */
+}
+
+a, button {
+  border: 1px solid var(--color-dark-gray);
+  padding: 0.25rem;
+
+  background: var(--color-light-gray);
+  color: var(--color-black);
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  background: var(--color-black);
+  color: var(--color-light-gray);
+}
+
+.button-selected {
+  background: var(--color-black);
+  color: var(--color-light-gray);
+}
+
+.hide {
+  display: none;
+}
+
+/*************** CONTAINER **************/
+
+.container {
+  padding: var(--padding);
+
+  /* outline: 1px solid black; */
+}
+
+.container > div {
+  /* outline: 1px solid white; */
+}
+
+.contact-button {
+  margin-right: 0.25rem;
+  width: 5rem;
+}
+
+/******************* A ******************/
+
+#a {
+  padding-bottom: 0;
+}
+
+/******************* B ******************/
+
+#b {
+  padding-top: 0;
+}
+
+#b > div {
+  margin-bottom: var(--padding);
+}
+
+#b > div:first-child {
+  margin-bottom: 0;
+}
+
+#b > div:last-child {
+  margin-bottom: 0;
+}
+
+#nav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+
+  padding: var(--padding) 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+}
+
+.nav-button {
+  margin-right: 0.25rem;
+  min-width: 8rem;
+}
+
+.nav-button:first-child {
+  margin-left: 0.25rem;
+}
+
+#button-all {
+  display: none;
+}
+
+.project-button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/************** BREAKPOINTS *************/
+
+/* Mobile-first approach */
+
+/* Tablet */
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+  body {
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: center;
+  }
+
+  .container {
+    width: calc(512px - (2 * var(--padding)));
+  }
+
+  #a {
+    padding-bottom: var(--padding);
+    padding-right: calc(var(--padding) / 2);
+    height: calc(100vh - (2 * var(--padding)));
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+
+  #b {
+    padding-left: calc(var(--padding) / 2);
+    height: calc(100vh - (var(--padding)));
+
+    overflow-y: scroll;
+  }
+
+  /* #nav {
+    padding: calc(1.25 * var(--padding)) 0 var(--padding);
+  } */
+
+}

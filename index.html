@@ -1,101 +1,233 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
 
-<html lang = "en-IN">
+    <!-- METADATA -->
+      <title>Arnav Das</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <head>
+    <!-- CSS -->
+      <link rel="stylesheet" href="style.css">
 
-        <!-- FAVICON -->
-            <link
-                rel = "icon"
-                type = "image/x-icon"
-                href = "images/favicon.png"
-            >
+    <!-- JS -->
+      <script src="script.js" defer></script>
 
-        <!-- TITLE -->
-            <title>
-                Arnav Das
-            </title>
+  </head>
+  <body>
 
-        <!-- BOOTSTRAP -->
-            <link
-                href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-                rel = "stylesheet"
-                integrity = "sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-                crossorigin = "anonymous"
-            >
+    <div class="container" id="a">
+      
+      <div id="heading">
+        <h1> Arnav Das </h1>
+        <h2> Full Stack Developer </h2>
+        <p> Experienced in building live projects. Proficient in frontend (HTML/CSS/JS) and backend (PHP), with foundational skills in Python, Java, C, and C++. </p>
+      </div>
 
-        <!-- CSS -->
-            <link
-                href = "stylesheets/main.css"
-                rel = "stylesheet"
-                type = "text/css"
-            >
+      <div id="contacts">
+        <h3> +91 770606 75849 | Vadodara, Gujarat </h3>
+        <button class="contact-button" id="cv"      > CV </button>
+        <button class="contact-button" onclick="openLink('mailto:arnavrdas@gmail.com')"> Email </button>
+        <button class="contact-button" onclick="openLink('https://www.linkedin.com/in/arnavrdas')"> LinkedIn </button>
+        <button class="contact-button" onclick="openLink('https://www.github.com/Arnav-R-Das')"> GitHub </button>
+      </div>
 
-        <!-- OTHER-->
-            <meta 
-                charset = "utf-8"
-                name = "viewport"
-                content = "
-                    width = device-width,
-                    initial-scale = 1
-                "
-            >
+    </div>
 
-    </head>
+    <div class="container" id="b">
 
-    <body>
-    
-        <!-- HEADER  -->
-            <div id = "all-header">
-                <img src = "images/favicon.png">
-            </div>
+      <div id="nav">
+        <button class="nav-button button-selected" id="allButton"            > All            </button>
+        <button class="nav-button"                 id="experienceButton"     > Experience     </button>
+        <button class="nav-button"                 id="educationButton"      > Education      </button>
+        <button class="nav-button"                 id="projectsButton"       > Projects       </button>
+        <button class="nav-button"                 id="certificationsButton" > Certifications </button>
+      </div>
 
-        <!-- NAVTAB -->
-            <div class = "container-fluid all-navtab">
-                <div class = "row">
+      <div class="section" id="experience">
 
-                    <div class = "col-4 text-center">
-                        <a
-                            href = "http://arnavdas.in"
-                            target = "_self"
-                        >
-                            Home
-                        </a>
-                    </div>
+        <h2>Experience</h2>
+        
+        <h3> Intern Full Stack Developer </h3>
+        <p>  
+          MaMo TechnoLabs LLP <br>
+          Vadodara, Gujarat <br>
+          December 2024 - January 2025 <br>
+        </p>
+        <p>
+          Led a team of interns who created a live e-commerce website completely from scratch. Using just vanilla JavaScript and PHP.
+        </p>
+        
+      </div>
 
-                    <div class = "col-4 text-center">
-                        <a
-                            href = "http://arnavdas.in/about-me"
-                            target = "_self"
-                        >
-                            About me
-                        </a>
-                    </div>
+      <div class="section" id="education">
 
-                    <div class = "col-4 text-center">
-                        <a
-                            href = "http://arnavdas.in/vlogs"
-                            target = "_self"
-                        >
-                            Vlogs
-                        </a>
-                    </div>
+        <h2>Education</h2>
+        
+        <h3> Bachelors in Computer Science and Engineering </h3>
+        <p>  
+          2022 - 2026 <br>
+          GSFC University <br>
+          Vadodara, Gujarat <br>
+          CGPA: 6.2 <br>
+        </p>
+        
+        <h3> Higher Secondary - CBSE </h3>
+        <p>  
+          2022 <br>
+          Delhi Public School Bangalore South <br>
+          Bangalore, Karnataka <br>
+          Percentage:  <br>
+        </p>
+        
+        <h3> Secondary - CBSE </h3>
+        <p>
+          2020 <br>
+          Delhi Public School Bangalore South <br>
+          Bangalore, Karnataka <br>
+          Percentage:  <br>
+        </p>
 
-                </div>
-            </div>
+      </div>
 
-        <!-- CONTENT-BOX -->
-            <div class = "all-content-box">
-                <img
-                    src = "images/workinprogress.gif"
-                    alt = "Work in Progress :/"
-                    title = "We're coming soon!!"
-                    style = "
-                        max-width: 18em;
-                    "
-                >
-            </div>
- 
-    </body>
+      <div class="section" id="projects">
 
+        <h2>Projects</h2>
+
+        <button class="project-button" onclick="openLink('https://github.com/Karma1905/PawsProtect')"> PawsProtect </button>
+        <p>
+          ...
+        </p>
+        <p>
+          Backend & Database: Firebase <br>
+          Frontend: React, Typescript, TailwindCSS, HTML <br>
+        </p>
+        
+        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/TurfPlex')"> TurfPlex </button>
+        <p>
+          A dynamic, full-stack website that allow users to find turfs in their locale, view available slots, book slots, pay and view booking history. Made using PHP, MySQL, JavaScript, CSS and HTML5.
+        </p>
+        <p>
+          Backend: PHP <br>
+          Database: MySQL <br>
+          Frontend: JavaScript, CSS, HTML5 <br>
+        </p>
+        
+        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Company-Finance-Manager')"> Company Finance Manager </button>
+        <p>
+          ...
+        </p>
+        <p>
+          Backend: PHP <br>
+          Database: MySQL <br>
+          Frontend: CSS, HTML <br>
+        </p>
+        
+        <button class="project-button" onclick="openLink()"> Furniture E-commerce </button>
+        <p>
+          ...
+        </p>
+        <p>
+          Backend: ... <br>
+          Database: ... <br>
+          Frontend: ... <br>
+        </p>
+        
+        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Eisenhower-Matrix')"> Eisenhower Matrix </button>
+        <p>
+          ...
+        </p>
+        <p>
+          Frontend: JavaScript (LocalStorage), CSS, HTML <br>
+        </p>
+        
+        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/URL-Blocker')"> URL Blocker </button>
+        <p>
+          A chrome extension that allow users to choose which websites/URLs they want to access and block everything else to minimize distractions. Made using vanilla JavaScript and CSS.
+        </p>
+        <p>
+          Frontend: HTML, CSS, JavaScript <br>
+        </p>
+        
+        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Simple-Todo-List')"> Simple Todo List </button>
+        <p>
+          ...
+        </p>
+        <p>
+          Frontend: JavaScript (LocalStorage), CSS, HTML <br>
+        </p>
+        
+        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/AI-Text-Classifier')"> AI Text Classifier </button>
+        <p>
+          Distinguishes between imagined, recalled and retold stories. Showcases data pre-processing, model training, and evaluation.
+        </p>
+        <p>
+          Programming: Python (Catboost, pandas, re, nltk, sklearn and collections) <br>
+        </p>
+        
+        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Academic-Timetable-Generator')"> Academic Timetable Generator </button>
+        <p>
+          Generates an academic timetable based on user defined constraints.
+        </p>
+        <p>
+          Programming: Python (CherryPy) <br>
+        </p>
+        
+        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Contact-Manager')"> Contact Manager </button>
+        <p>
+          A simple contact manager which allows the user to add, view all and search contacts.
+        </p>
+        <p>
+          Programming: Java <br>
+        </p>
+        
+        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Parking-Ticket-Manager')"> Parking Ticket Manager </button>
+        <p>
+          Records vehicle number, time of arrival and departure. Automatically generates a receipt based on the number of hours. Asks for customer feedback. Also handles errors.
+        </p>
+        <p>
+          Programming: C <br>
+        </p>
+      
+      </div>
+
+      <div class="section" id="certifications">
+
+        <h2>Certifications</h2>
+
+        <h3> Responsible & Safe AI Systems </h3>
+        <p>
+          NPTEL <br>
+          2024 <br>
+        </p>
+
+        <h3> UAS/Drone Technology </h3>
+        <p>
+          C-DAC Bootcamp <br>
+          2024 <br>
+        </p>
+
+        <h3> Programming Basics for Automation Engineers </h3>
+        <p>
+          FutureSkillsPrime <br>
+          2023 <br>
+        </p>
+
+        <h3> Introduction to cybersecurity </h3>
+        <p>
+          Cisco NetAcad <br>
+          2023 <br>
+        </p>
+
+        <h3> AI Fundamentals (AI-900) </h3>
+        <p>
+          Azure <br>
+          2023 <br>
+        </p>
+
+      </div>
+
+    </div>
+
+  </body>
 </html>
