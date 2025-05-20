@@ -26,19 +26,26 @@ function toggleSection(section) {
             experienceButton.classList.add('button-selected');
             experience.classList.remove('hide');
             break;
+
         case 'education':
             educationButton.classList.add('button-selected');
             education.classList.remove('hide');
             break;
+
         case 'projects':
             projectsButton.classList.add('button-selected');
             projects.classList.remove('hide');
             break;
+
         case 'certifications':
             certificationsButton.classList.add('button-selected');
             certifications.classList.remove('hide');
             break;
     }
+
+    document.getElementById('nav').scrollIntoView({
+        behavior: 'smooth' // adds smooth scrolling
+    });
 }
 
 document.addEventListener("click", (e) => {
