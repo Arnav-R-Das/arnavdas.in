@@ -4,11 +4,19 @@ function toggleSection(section) {
     allButton.classList.remove('button-selected');
     experienceButton.classList.remove('button-selected');
     educationButton.classList.remove('button-selected');
+    skillsButton.classList.remove('button-selected');
     projectsButton.classList.remove('button-selected');
     certificationsButton.classList.remove('button-selected');
 
+    experience.classList.remove('show');
+    education.classList.remove('show');
+    skills.classList.remove('show');
+    projects.classList.remove('show');
+    certifications.classList.remove('show');
+
     experience.classList.add('hide');
     education.classList.add('hide');
+    skills.classList.add('hide')
     projects.classList.add('hide');
     certifications.classList.add('hide');
 
@@ -18,6 +26,7 @@ function toggleSection(section) {
             allButton.classList.add('button-selected');
             experience.classList.remove('hide');
             education.classList.remove('hide');
+            skills.classList.remove('hide');
             projects.classList.remove('hide');
             certifications.classList.remove('hide');
             break;
@@ -25,21 +34,32 @@ function toggleSection(section) {
         case 'experience':
             experienceButton.classList.add('button-selected');
             experience.classList.remove('hide');
+            experience.classList.add('show');
             break;
 
         case 'education':
             educationButton.classList.add('button-selected');
             education.classList.remove('hide');
+            education.classList.add('show');
+            break;
+
+        case 'skills':
+            skillsButton.classList.add('button-selected');
+            skills.classList.remove('hide');
+            skills.classList.add('show');
             break;
 
         case 'projects':
             projectsButton.classList.add('button-selected');
             projects.classList.remove('hide');
+            projects.classList.add('show');
             break;
 
         case 'certifications':
             certificationsButton.classList.add('button-selected');
             certifications.classList.remove('hide');
+            certifications.classList.add('show');
+            
             break;
     }
 
@@ -66,19 +86,15 @@ document.addEventListener("click", (e) => {
                 })
                 .catch(error => console.error('Error downloading file:', error));
         }
-        // if (e.target.id === 'email')    { window.open('mailto:arnavrdas@gmail.com',            '_blank') }
-        // if (e.target.id === 'linkedin') { window.open('https://www.linkedin.com/in/arnavrdas', '_blank') }
-        // if (e.target.id === 'github')   { window.open('https://www.github.com/Arnav-R-Das',    '_blank') }
 
     // Sections
         if (e.target.id === 'allButton')            { toggleSection('all'           ) }
         if (e.target.id === 'experienceButton')     { toggleSection('experience'    ) }
         if (e.target.id === 'educationButton')      { toggleSection('education'     ) }
+        if (e.target.id === 'skillsButton')         { toggleSection('skills'        ) }
         if (e.target.id === 'projectsButton')       { toggleSection('projects'      ) }
         if (e.target.id === 'certificationsButton') { toggleSection('certifications') }
 
     // Projects
         if (e.target.id === 'linkedin') { window.open('https://www.github.com/Arnav-R-Das/', '_blank') }
-    
-
 })

@@ -4,6 +4,7 @@
 
     <!-- METADATA -->
       <title>Arnav Das</title>
+      <link rel="icon" type="image/x-icon" href="images/Arnav_Das.png">
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,18 +19,26 @@
 
     <div class="container" id="a">
       
+      <!-- <div id="myPic">
+        <img src="images/Arnav_Das.jpg" alt="Pic of Arnav Das.">
+      </div> -->
+
       <div id="heading">
         <h1> Arnav Das </h1>
         <h2> Full Stack Developer </h2>
-        <p> Experienced in building live projects. Proficient in frontend (HTML/CSS/JS) and backend (PHP), with foundational skills in Python, Java, C, and C++. </p>
+        <p> Solving <span style="color: hsl(0, 0%, 80%); font-weight: bold;">real problems</span> for <span style="color: hsl(0, 0%, 80%); font-weight: bold;">real users.</span> Not just building more projects. </p>
+        <p> 21 year old Full Stack Developer. Currently pursuing B.Tech CSE. Based in Vadodara, Gujarat. </pp>
+        <p> Experienced in building live projects. Proficient in frontend (Typescript/React/TailwindCSS) and backend (Node.js/Express.js/PHP), with foundational skills in Python, Java, C, and C++. </p>
       </div>
 
       <div id="contacts">
         <h3> +91 770606 75849 | Vadodara, Gujarat </h3>
-        <button class="contact-button" id="cv"      > CV </button>
-        <button class="contact-button" onclick="openLink('mailto:arnavrdas@gmail.com')"> Email </button>
-        <button class="contact-button" onclick="openLink('https://www.linkedin.com/in/arnavrdas')"> LinkedIn </button>
-        <button class="contact-button" onclick="openLink('https://www.github.com/Arnav-R-Das')"> GitHub </button>
+        <div>
+          <button class="contact-button" id="cv"> CV </button>
+          <button class="contact-button" onclick="openLink('mailto:arnavrdas@gmail.com'           )"> Email </button>
+          <button class="contact-button" onclick="openLink('https://www.linkedin.com/in/arnavrdas')"> LinkedIn </button>
+          <button class="contact-button" onclick="openLink('https://www.github.com/Arnav-R-Das'   )"> GitHub </button>
+        </div>
       </div>
 
     </div>
@@ -40,6 +49,7 @@
         <button class="nav-button button-selected" id="allButton"            > All            </button>
         <button class="nav-button"                 id="experienceButton"     > Experience     </button>
         <button class="nav-button"                 id="educationButton"      > Education      </button>
+        <button class="nav-button"                 id="skillsButton"         > Skills         </button>
         <button class="nav-button"                 id="projectsButton"       > Projects       </button>
         <button class="nav-button"                 id="certificationsButton" > Certifications </button>
       </div>
@@ -48,16 +58,29 @@
 
         <h2>Experience</h2>
         
-        <h3> Intern Full Stack Developer </h3>
-        <p>  
-          MaMo TechnoLabs LLP <br>
-          Vadodara, Gujarat <br>
-          December 2024 - January 2025 <br>
-        </p>
-        <p>
-          Led a team of interns who created a live e-commerce website completely from scratch. Using just vanilla JavaScript and PHP.
-        </p>
-        
+        <div class="experience-card">
+
+          <div class="experience-card-logo">
+            <img src="images/mamo_technolabs_logo.jpeg" alt="Logo of Mamo TechnoLabs LLP">
+          </div>
+
+          <div class="experience-card-info-main">
+            <h3> Intern Full Stack Developer </h3>
+            <p>  
+              MaMo TechnoLabs LLP <br>
+              Vadodara, Gujarat <br>
+              December 2024 - January 2025 <br>
+            </p>
+          </div>
+
+          <div class="experience-card-info-more">
+            <p>
+              Led a team of interns who created a live e-commerce website completely from scratch. Using just vanilla JavaScript and PHP.
+            </p>
+          </div>
+
+        </div>
+          
       </div>
 
       <div class="section" id="education">
@@ -68,24 +91,62 @@
         <p>  
           2022 - 2026 <br>
           GSFC University <br>
-          Vadodara, Gujarat <br>
-          CGPA: 6.2 <br>
+          <!-- Vadodara, Gujarat <br>
+          CGPA: 6.2 <br> -->
         </p>
         
         <h3> Higher Secondary - CBSE </h3>
         <p>  
           2022 <br>
           Delhi Public School Bangalore South <br>
-          Bangalore, Karnataka <br>
-          Percentage:  <br>
+          <!-- Bangalore, Karnataka <br>
+          Percentage: 71 <br> -->
         </p>
         
         <h3> Secondary - CBSE </h3>
         <p>
           2020 <br>
           Delhi Public School Bangalore South <br>
-          Bangalore, Karnataka <br>
-          Percentage:  <br>
+          <!-- Bangalore, Karnataka <br>
+          Percentage: 82 <br> -->
+        </p>
+
+      </div>
+
+      <div class="section" id="skills">
+
+        <h2>Skills</h2>
+        
+        <h3> Backend </h3>
+        <p>  
+          <button class="skill-button"> Node.js </button>
+          <button class="skill-button"> Express.js </button>
+          <button class="skill-button"> PHP </button>
+        </p>
+        
+        <h3> Frontend </h3>
+        <p>
+          <button class="skill-button"> React </button>
+          <button class="skill-button"> TypeScript </button>
+          <button class="skill-button"> JavaScript </button>
+          <button class="skill-button"> TailwindCSS </button>
+          <button class="skill-button"> Bootstrap </button>
+          <button class="skill-button"> CSS </button>
+          <button class="skill-button"> HTML </button>
+        </p>
+        
+        <h3> Programming </h3>
+        <p>
+          <button class="skill-button"> Python </button>
+          <button class="skill-button"> Java </button>
+          <button class="skill-button"> C++ </button>
+          <button class="skill-button"> C </button>
+        </p>
+        
+        <h3> Version Control </h3>
+        <p>
+          <button class="skill-button"> Git </button>
+          <button class="skill-button"> GitHub </button>
         </p>
 
       </div>
@@ -94,7 +155,7 @@
 
         <h2>Projects</h2>
 
-        <button class="project-button" onclick="openLink('https://github.com/Karma1905/PawsProtect')"> PawsProtect </button>
+        <button class="project-button project-button-first-child" onclick="openLink('https://github.com/Karma1905/PawsProtect')"> PawsProtect </button>
         <p>
           ...
         </p>
@@ -113,6 +174,16 @@
           Frontend: JavaScript, CSS, HTML5 <br>
         </p>
         
+        <button class="project-button" onclick="openLink()"> FurniBazaar </button>
+        <p>
+          ...
+        </p>
+        <p>
+          Backend: ... <br>
+          Database: ... <br>
+          Frontend: ... <br>
+        </p>
+        
         <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Company-Finance-Manager')"> Company Finance Manager </button>
         <p>
           ...
@@ -121,16 +192,6 @@
           Backend: PHP <br>
           Database: MySQL <br>
           Frontend: CSS, HTML <br>
-        </p>
-        
-        <button class="project-button" onclick="openLink()"> Furniture E-commerce </button>
-        <p>
-          ...
-        </p>
-        <p>
-          Backend: ... <br>
-          Database: ... <br>
-          Frontend: ... <br>
         </p>
         
         <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Eisenhower-Matrix')"> Eisenhower Matrix </button>
