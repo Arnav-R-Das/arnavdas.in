@@ -3,17 +3,31 @@
 :root{
   --color-white:      hsl(0, 0%, 100%);
   --color-light-gray: hsl(0, 0%,  85%);
-  --color-dark-gray:  hsl(0, 0%,  50%);
+  --color-dark-gray:  hsl(0, 0%,  60%);
   --color-black:      hsl(0, 0%,  10%);
 
   --padding: calc(3 * var(--font-size));
-  --font-size: 1rem;
+  --font-size: 1.75vh;
+  --spacing-1: var(--font-size);
+  --spacing-2: calc(var(--font-size) * 2);
 
-  --button-margin: 0.75rem;
-  --button-padding-top-and-bottom: 0.25rem;
-  --button-padding-left-and-right: 1rem;
+  --h1-font-size:   calc(3 * var(--font-size));
+  --h2-font-size:   calc(1.5 * var(--font-size));
+  --h3-font-size:   calc(1 * var(--font-size));
+  --h4-font-size:   var(--font-size);
+  --p-font-size:    var(--font-size);
 
-  --experience-card-info-main-height: calc((2 * var(--font-size) + (3 * 1.5 * var(--font-size))));
+  --h1-line-height: var(--h1-font-size);
+  --h2-line-height: var(--h2-font-size);
+  --h3-line-height: calc(1.5 * var(--h3-font-size));
+  --h4-line-height: calc(1.5 * var(--h4-font-size));
+  --p-line-height:  calc(1.5 * var(--p-font-size));
+
+  --button-margin: 0.75vh;
+  --button-padding-top-and-bottom: 0.25vh;
+  --button-padding-left-and-right: 1.5vh;
+
+  --experience-card-info-main-height: calc(var(--h3-line-height) + var(--spacing-1) + (3 * var(--p-line-height)));
 
   --height-a: calc(100vh - var(--padding));
   --height-nav: calc(var(--font-size) + (2 * var(--button-padding-top-and-bottom)) + (2 * var(--padding)));
@@ -41,44 +55,51 @@
 
 /* Body */
 
-body {
-  font-size: 100%;
-}
-
 /* Typography */
 
 h1 {
-  margin: 0 0 var(--font-size) 0;
+  margin: 0 0 var(--spacing-1) 0;
 
-  font-size: calc(3 * var(--font-size));
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
   font-weight: bold;
   color: var(--color-white);
-
-  /* outline: 1px solid white; */
 }
 
 h2 {
-  margin: 0 0 calc(2 * var(--font-size)) 0;
+  margin: 0 0 var(--spacing-2) 0;
 
-  font-size: calc(1.5 * var(--font-size));
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
   color: var(--color-white);
-
-  /* outline: 1px solid red; */
 }
 
 h3 {
-  margin: calc(2 * var(--font-size)) 0 calc(var(--font-size)) 0;
+  margin: var(--spacing-2) 0 var(--spacing-1) 0;
 
-  font-size: var(--font-size);
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
   color: var(--color-light-gray);
-  /* outline: 1px solid green; */
+}
+
+h4 {
+  margin: var(--spacing-2) 0 0;
+
+  font-size: var(--h4-font-size);
+  line-height: var(--h4-line-height);
+  color: var(--color-light-gray);
 }
 
 p {
-  margin: var(--font-size) 0;
+  margin: 0 0 var(--spacing-1);
 
-  line-height: calc(1.5 * var(--font-size));
-  /* outline: 1px solid blue; */
+  font-size: var(--p-font-size);
+  line-height: var(--p-line-height);
+}
+
+#highlight {
+  color: var(--color-light-gray);
+  font-weight: bold;
 }
 
 /* Buttons */
@@ -91,8 +112,8 @@ button {
   background-color: var(--color-light-gray);
   color: var(--color-black);
   text-decoration: none;
-  outline: 1px solid var(--color-dark-gray);
-  border-radius: calc(2 * var(--button-padding-top-and-bottom));
+  outline: 1px solid var(--color-light-gray);
+  border-radius: calc(var(--font-size));
 }
 
 button:hover {
@@ -111,17 +132,64 @@ button:hover {
 
 /*************** CONTAINER **************/
 
-.container {
-  padding: var(--padding);
-
-  /* outline: 1px solid black; */
+.container > div {
+  margin: 0 var(--padding) var(--padding);
 }
 
-.container > div {
-  /* outline: 1px solid white; */
+/******************* A ******************/
+
+#heading > p:last-child {
+  margin-bottom: 0;
+}
+
+#a {  
+  height: calc(100vh - (var(--padding) - 1px));
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+/* Heading */
+
+#heading {
+  margin: var(--padding) var(--padding) 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#heading > div:not(:first-child) {
+  margin-top: var(--padding);
+}
+
+#pic-and-name-div {
+  display: flex;
+  flex-flow: row nowrap;
+
+  width: 100%;
+}
+
+#pic-and-name-div > div {
+  height: 25vh;
+}
+
+#my-pic {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+
+#my-name {
+  margin-left: var(--padding);
+  align-content: center;
 }
 
 /* Contacts */
+
+#contacts {
+  margin-bottom: 0;
+}
 
 #contacts > div {
   display: flex;
@@ -129,14 +197,11 @@ button:hover {
 }
 
 .contact-button {
-  width: 100%;
+  width: calc(25% - (2px + var(--button-margin)));
 }
 
-/******************* A ******************/
-
-#a {
-  padding-bottom: 0;
-  height: calc(var(--height-a) - var(--height-nav));
+.contact-button:last-child {
+  margin-right: 0;
 }
 
 /******************* B ******************/
@@ -145,21 +210,8 @@ button:hover {
   padding-top: 0;
 }
 
-#b > div {
-  margin-bottom: var(--padding);
-}
-
-#b > div:first-child {
-  margin-bottom: 0;
-}
-
-#b > div:last-child {
-  margin-bottom: 0;
-}
-
 #b > .show {
-  margin-bottom: 0;
-  height: calc(100vh - (var(--height-nav) + var(--padding)));
+  min-height: calc(100vh - (var(--height-nav) + var(--padding) + 2px));
 
   overflow-y: scroll;
 }
@@ -171,13 +223,13 @@ button:hover {
   position: sticky;
   top: 0;
 
-  padding: var(--padding) 0;
+  margin: 0;
+  padding: var(--padding);
+  max-width: 100vw;
 
   display: flex;
   flex-flow: row nowrap;
   overflow-x: scroll;
-
-  background-color: var(--color-black);
 }
 
 .nav-button {
@@ -188,11 +240,27 @@ button:hover {
   margin-right: 1px;
 }
 
+/* Section */
+
+.header {
+  margin-bottom: var(--spacing-1);
+}
+
+.sub-header {
+  margin: var(--spacing-1) 0 var(--spacing-2);
+}
+
 /* Experience */
+
+#experience > div > div > p {
+  margin-bottom: 0;
+}
 
 .experience-card {
   display: flex;
   flex-flow: row wrap;
+
+  margin: var(--spacing-2) 0 0;
 }
 
 .experience-card-logo {
@@ -207,23 +275,35 @@ button:hover {
 }
 
 .experience-card-info-main {
-  margin-left: var(--font-size);
+  margin-left: var(--spacing-1);
   height: var(--experience-card-info-main-height);
-  width: calc(100% - (var(--experience-card-info-main-height) + var(--font-size)));
+  width: calc(100% - (var(--experience-card-info-main-height) + var(--spacing-1)));
+
+  overflow: hidden;
 }
 
-.experience-card-info-main > h3 {
-  margin: 0 0 calc(var(--font-size)) 0;
+.experience-card-info-main > h4 {
+  margin: 0 0 var(--spacing-1) 0;
 }
 
 .experience-card-info-more {
+  margin-top: var(--spacing-1);
   width: 100%;
 }
 
+/* Education */
+
 /* Skills */
 
+.skill-name-button:hover {
+  background-color: var(--color-light-gray);
+  color: var(--color-black);
+}
+
 .skill-button {
-  margin-bottom: var(--font-size);
+  margin-top: calc(var(--spacing-1) / 2);
+  margin-bottom: var(--spacing-1);
+
   padding: var(--button-padding-top-and-bottom) var(--button-padding-left-and-right);
 
   background-color: var(--color-black);
@@ -238,13 +318,15 @@ button:hover {
 /* Projects */
 
 .project-button {
-  margin-top: var(--font-size);
+  margin: var(--spacing-1) 0 var(--spacing-1) 1px ;
   padding: var(--button-padding-top-and-bottom) var(--button-padding-left-and-right);
 }
 
 .project-button-first-child {
   margin-top: 0;
 }
+
+/* Certifications */
 
 /************** BREAKPOINTS *************/
 
@@ -254,45 +336,66 @@ button:hover {
     --padding: calc(5 * var(--font-size));
   }
 
-  .contact-button {
-    width: 8rem;
-  }
-
   .experience-card-info-more {
-    margin-left: calc(var(--experience-card-info-main-height) + var(--font-size));
-    width: calc(100% - (var(--experience-card-info-main-height) + var(--font-size)));
+    margin-left: calc(var(--experience-card-info-main-height) + var(--spacing-1));
+    width: calc(100% - (var(--experience-card-info-main-height) + var(--spacing-1)));
   }
 
 }
 
-
-/* Desktop */
 @media (min-width: 100rem) {
 
-  body {
-    display: flex;
-    flex-flow: row nowrap;
-
-    justify-content: center;
+  .body {
+    position: relative;
   }
 
   #a {
-    padding-bottom: var(--padding);
-    padding-right: calc(var(--padding) / 2);
-    height: calc(100vh - (2 * var(--padding)));
-    width: calc(35vw - var(--padding));
+      position: fixed;
+      top: 0;
+      left: 0;
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+      width: 40vw;
   }
 
   #b {
-    padding-left: calc(var(--padding) / 2);
-    height: calc(100vh - (var(--padding)));
-    width: calc(65vw - var(--padding));
-
-    overflow-y: scroll;
+      margin-left: 40vw;
   }
-
 }
+
+/**************** TESTING ***************/
+
+/* .container {
+  outline: 1px solid black;
+} */
+
+/* .container > div {
+  outline: 1px solid white;
+} */
+
+/* #heading > div {
+  outline: 1px solid red;
+} */
+
+/* h1 {
+  outline: 1px solid white;
+}
+
+h2 {
+  outline: 1px solid red;
+}
+
+h3 {
+  outline: 1px solid green;
+}
+
+h4 {
+  outline: 1px solid yellow;
+}
+
+p {
+  outline: 1px solid blue;
+}
+
+.experience-card > div {
+  outline: 1px solid red;
+} */

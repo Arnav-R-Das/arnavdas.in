@@ -18,26 +18,47 @@
   <body>
 
     <div class="container" id="a">
-      
-      <!-- <div id="myPic">
-        <img src="images/Arnav_Das.jpg" alt="Pic of Arnav Das.">
-      </div> -->
 
       <div id="heading">
-        <h1> Arnav Das </h1>
-        <h2> Full Stack Developer </h2>
-        <p> Solving <span style="color: hsl(0, 0%, 80%); font-weight: bold;">real problems</span> for <span style="color: hsl(0, 0%, 80%); font-weight: bold;">real users.</span> Not just building more projects. </p>
-        <p> 21 year old Full Stack Developer. Currently pursuing B.Tech CSE. Based in Vadodara, Gujarat. </pp>
-        <p> Experienced in building live projects. Proficient in frontend (Typescript/React/TailwindCSS) and backend (Node.js/Express.js/PHP), with foundational skills in Python, Java, C, and C++. </p>
+
+        <div id="pic-and-name-div">
+
+          <div>
+            <img id="my-pic" src="images/Arnav_Das.jpg" alt="Pic of Arnav Das.">
+          </div>
+
+          <div id="my-name">
+            <h1> Arnav Das </h1>
+            <h2> Fullstack Developer </h2>
+          </div>
+
+        </div>
+
+        <div style="display: flex; flex-flow: column nowrap;">
+          <p>
+            <span id="highlight">Final year B.Tech CSE</span> student at GSFC University. <br>
+            <span id="highlight">Fullstack Developer intern</span> at Inbox Infotech Pvt. Ltd.
+          </p>
+          <p>
+            Experienced in developing and deploying <span id="highlight">end-to-end solutions</span> for <span id="highlight">real users.</span>
+          </p>
+          <p>
+            Proficient in <span id="highlight">Node.js</span> and <span id="highlight">React.</span> <br>
+          </p>
+        </div>
+
       </div>
 
       <div id="contacts">
-        <h3> +91 770606 75849 | Vadodara, Gujarat </h3>
+        <h3>
+          📞 +91 770606 75849 <br>
+          📍 Vadodara, Gujarat, India
+        </h3>
         <div>
           <button class="contact-button" id="cv"> CV </button>
           <button class="contact-button" onclick="openLink('mailto:arnavrdas@gmail.com'           )"> Email </button>
           <button class="contact-button" onclick="openLink('https://www.linkedin.com/in/arnavrdas')"> LinkedIn </button>
-          <button class="contact-button" onclick="openLink('https://www.github.com/Arnav-R-Das'   )"> GitHub </button>
+          <button class="contact-button" onclick="openLink('https://www.github.com/arnavrdas'   )"> GitHub </button>
         </div>
       </div>
 
@@ -47,11 +68,52 @@
 
       <div id="nav">
         <button class="nav-button button-selected" id="allButton"            > All            </button>
-        <button class="nav-button"                 id="experienceButton"     > Experience     </button>
-        <button class="nav-button"                 id="educationButton"      > Education      </button>
         <button class="nav-button"                 id="skillsButton"         > Skills         </button>
+        <button class="nav-button"                 id="experienceButton"     > Experience     </button>
         <button class="nav-button"                 id="projectsButton"       > Projects       </button>
-        <button class="nav-button"                 id="certificationsButton" > Certifications </button>
+        <button class="nav-button"                 id="educationButton"      > Education      </button>
+      </div>
+
+      <div class="section" id="skills">
+
+        <h2 class="header">Skills</h2>
+
+        <!-- <h3 class="sub-header">Click on the skill to see projects where I used it!</h3> -->
+
+        <h4> Backend </h4>
+        <p>
+          <button class="skill-button"> Node.js </button>
+          <button class="skill-button"> Python </button>
+        </p>
+        <h4> Frontend </h4>
+        <p>
+          <button class="skill-button"> TypeScript </button>
+          <button class="skill-button"> React </button>
+          <button class="skill-button"> Next.js </button>
+          <button class="skill-button"> React Native </button>
+        </p>
+        <h4> Deployment & CI/CD </h4>
+        <p>
+          <button class="skill-button"> Digital Ocean </button>
+          <button class="skill-button"> Nginx </button>
+          <button class="skill-button"> Docker </button>
+          <button class="skill-button"> GitHub Actions </button>
+        </p>
+        <h4> Version Control </h4>
+        <p>
+          <button class="skill-button"> Git </button>
+          <button class="skill-button"> GitHub </button>
+        </p>
+        <h4> Programming Languages </h4>
+        <p>
+          <button class="skill-button"> Typescript </button>
+          <button class="skill-button"> Python </button>
+          <button class="skill-button"> Java </button>
+          <button class="skill-button"> C++ </button>
+          <button class="skill-button"> C </button>
+        </p>
+
+
       </div>
 
       <div class="section" id="experience">
@@ -61,21 +123,90 @@
         <div class="experience-card">
 
           <div class="experience-card-logo">
+            <img src="images/inbox_infotech_logo.jpeg" alt="Logo of Inbox Infotech Pvt. Ltd.">
+          </div>
+
+          <div class="experience-card-info-main">
+            <h4> Fullstack Developer Intern </h4>
+            <p>  
+              Inbox Infotech Pvt. Ltd. <br>
+              Vadodara, Gujarat, India <br>
+              January 2026 - June 2026 <br>
+            </p>
+          </div>
+
+          <div class="experience-card-info-more">
+            <p>
+              ...
+            </p>
+          </div>
+
+        </div>
+        
+        <div class="experience-card">
+
+          <div class="experience-card-logo">
+            <img src="images/amdox_technologies_logo.jpeg" alt="Logo of Amdox Technologies">
+          </div>
+
+          <div class="experience-card-info-main">
+            <h4> Fullstack Developer Intern </h4>
+            <p>  
+              Amdox Technologies <br>
+              Bangalore, Karnataka, India <br>
+              December 2025 - January 2026 <br>
+            </p>
+          </div>
+
+          <div class="experience-card-info-more">
+            <p>
+              ...
+            </p>
+          </div>
+
+        </div>
+        
+        <div class="experience-card">
+
+          <div class="experience-card-logo">
+            <img src="images/cognifyz_technologies_logo.jpeg" alt="Logo of CognifyZ Technologies">
+          </div>
+
+          <div class="experience-card-info-main">
+            <h4> Fullstack Developer Intern </h4>
+            <p>  
+              CognifyZ Technologies <br>
+              Nagpur, Maharastra, India <br>
+              June 2025 - July 2025 <br>
+            </p>
+          </div>
+
+          <div class="experience-card-info-more">
+            <p>
+              ...
+            </p>
+          </div>
+
+        </div>
+        
+        <div class="experience-card">
+
+          <div class="experience-card-logo">
             <img src="images/mamo_technolabs_logo.jpeg" alt="Logo of Mamo TechnoLabs LLP">
           </div>
 
           <div class="experience-card-info-main">
-            <h3> Intern Full Stack Developer </h3>
+            <h4> Fullstack Developer Intern </h4>
             <p>  
               MaMo TechnoLabs LLP <br>
-              Vadodara, Gujarat <br>
+              Vadodara, Gujarat, India <br>
               December 2024 - January 2025 <br>
             </p>
           </div>
 
           <div class="experience-card-info-more">
             <p>
-              Led a team of interns who created a live e-commerce website completely from scratch. Using just vanilla JavaScript and PHP.
+              ...
             </p>
           </div>
 
@@ -83,77 +214,11 @@
           
       </div>
 
-      <div class="section" id="education">
-
-        <h2>Education</h2>
-        
-        <h3> Bachelors in Computer Science and Engineering </h3>
-        <p>  
-          2022 - 2026 <br>
-          GSFC University <br>
-          <!-- Vadodara, Gujarat <br>
-          CGPA: 6.2 <br> -->
-        </p>
-        
-        <h3> Higher Secondary - CBSE </h3>
-        <p>  
-          2022 <br>
-          Delhi Public School Bangalore South <br>
-          <!-- Bangalore, Karnataka <br>
-          Percentage: 71 <br> -->
-        </p>
-        
-        <h3> Secondary - CBSE </h3>
-        <p>
-          2020 <br>
-          Delhi Public School Bangalore South <br>
-          <!-- Bangalore, Karnataka <br>
-          Percentage: 82 <br> -->
-        </p>
-
-      </div>
-
-      <div class="section" id="skills">
-
-        <h2>Skills</h2>
-        
-        <h3> Backend </h3>
-        <p>  
-          <button class="skill-button"> Node.js </button>
-          <button class="skill-button"> Express.js </button>
-          <button class="skill-button"> PHP </button>
-        </p>
-        
-        <h3> Frontend </h3>
-        <p>
-          <button class="skill-button"> React </button>
-          <button class="skill-button"> TypeScript </button>
-          <button class="skill-button"> JavaScript </button>
-          <button class="skill-button"> TailwindCSS </button>
-          <button class="skill-button"> Bootstrap </button>
-          <button class="skill-button"> CSS </button>
-          <button class="skill-button"> HTML </button>
-        </p>
-        
-        <h3> Programming </h3>
-        <p>
-          <button class="skill-button"> Python </button>
-          <button class="skill-button"> Java </button>
-          <button class="skill-button"> C++ </button>
-          <button class="skill-button"> C </button>
-        </p>
-        
-        <h3> Version Control </h3>
-        <p>
-          <button class="skill-button"> Git </button>
-          <button class="skill-button"> GitHub </button>
-        </p>
-
-      </div>
-
       <div class="section" id="projects">
 
-        <h2>Projects</h2>
+        <h2 class="header">Projects</h2>
+
+        <h3 class="sub-header">Click on the project name to check it out!</h3>
 
         <button class="project-button project-button-first-child" onclick="openLink('https://github.com/Karma1905/PawsProtect')"> PawsProtect </button>
         <p>
@@ -164,7 +229,7 @@
           Frontend: React, Typescript, TailwindCSS, HTML <br>
         </p>
         
-        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/TurfPlex')"> TurfPlex </button>
+        <button class="project-button" onclick="openLink('https://github.com/arnavrdas/TurfPlex')"> TurfPlex </button>
         <p>
           A dynamic, full-stack website that allow users to find turfs in their locale, view available slots, book slots, pay and view booking history. Made using PHP, MySQL, JavaScript, CSS and HTML5.
         </p>
@@ -184,7 +249,7 @@
           Frontend: JavaScript <br>
         </p>
         
-        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Company-Finance-Manager')"> Company Finance Manager </button>
+        <button class="project-button" onclick="openLink('https://github.com/arnavrdas/Company-Finance-Manager')"> Company Finance Manager </button>
         <!-- <p>
           ...
         </p> -->
@@ -202,7 +267,7 @@
           Frontend: JavaScript (LocalStorage), CSS, HTML <br>
         </p>
         
-        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/URL-Blocker')"> URL Blocker </button>
+        <button class="project-button" onclick="openLink('https://github.com/arnavrdas/URL-Blocker')"> URL Blocker </button>
         <p>
           A chrome extension that allow users to choose which websites/URLs they want to access and block everything else to minimize distractions. Made using vanilla JavaScript and CSS.
         </p>
@@ -210,7 +275,7 @@
           Frontend: HTML, CSS, JavaScript <br>
         </p>
         
-        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Simple-Todo-List')"> Simple Todo List </button>
+        <button class="project-button" onclick="openLink('https://github.com/arnavrdas/Simple-Todo-List')"> Simple Todo List </button>
         <p>
           A simple todo list app. Create, update, reorder and delete tasks.
         </p>
@@ -218,7 +283,7 @@
           Frontend: JavaScript (LocalStorage), CSS, HTML <br>
         </p>
         
-        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/AI-Text-Classifier')"> AI Text Classifier </button>
+        <button class="project-button" onclick="openLink('https://github.com/arnavrdas/AI-Text-Classifier')"> AI Text Classifier </button>
         <p>
           Distinguishes between imagined, recalled and retold stories. Showcases data pre-processing, model training, and evaluation.
         </p>
@@ -226,7 +291,7 @@
           Programming: Python (Catboost, pandas, re, nltk, sklearn and collections) <br>
         </p>
         
-        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Academic-Timetable-Generator')"> Academic Timetable Generator </button>
+        <button class="project-button" onclick="openLink('https://github.com/arnavrdas/Academic-Timetable-Generator')"> Academic Timetable Generator </button>
         <p>
           Generates an academic timetable based on user defined constraints.
         </p>
@@ -234,7 +299,7 @@
           Programming: Python (CherryPy) <br>
         </p>
         
-        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Contact-Manager')"> Contact Manager </button>
+        <button class="project-button" onclick="openLink('https://github.com/arnavrdas/Contact-Manager')"> Contact Manager </button>
         <p>
           A simple contact manager which allows the user to add, view all and search contacts.
         </p>
@@ -242,7 +307,7 @@
           Programming: Java <br>
         </p>
         
-        <button class="project-button" onclick="openLink('https://github.com/Arnav-R-Das/Parking-Ticket-Manager')"> Parking Ticket Manager </button>
+        <button class="project-button" onclick="openLink('https://github.com/arnavrdas/Parking-Ticket-Manager')"> Parking Ticket Manager </button>
         <p>
           Records vehicle number, time of arrival and departure. Automatically generates a receipt based on the number of hours. Asks for customer feedback. Also handles errors.
         </p>
@@ -252,38 +317,29 @@
       
       </div>
 
-      <div class="section" id="certifications">
+      <div class="section" id="education">
 
-        <h2>Certifications</h2>
-
-        <h3> Responsible & Safe AI Systems </h3>
+        <h2>Education</h2>
+        
+        <h4> B.Tech - Computer Science and Engineering </h4>
         <p>
-          NPTEL <br>
-          2024 <br>
+          2026 <br>
+          GSFC University <br>
+          CGPA: 6.14 / 10
         </p>
-
-        <h3> UAS/Drone Technology </h3>
+        
+        <h4> Higher Secondary - CBSE </h4>
         <p>
-          C-DAC Bootcamp <br>
-          2024 <br>
+          2022 <br>
+          Delhi Public School Bangalore South <br>
+          Percentage: 71 / 100
         </p>
-
-        <h3> Programming Basics for Automation Engineers </h3>
+        
+        <h4> Secondary - CBSE </h4>
         <p>
-          FutureSkillsPrime <br>
-          2023 <br>
-        </p>
-
-        <h3> Introduction to cybersecurity </h3>
-        <p>
-          Cisco NetAcad <br>
-          2023 <br>
-        </p>
-
-        <h3> AI Fundamentals (AI-900) </h3>
-        <p>
-          Azure <br>
-          2023 <br>
+          2020 <br>
+          Delhi Public School Bangalore South <br>
+          Percentage: 83 / 100
         </p>
 
       </div>
