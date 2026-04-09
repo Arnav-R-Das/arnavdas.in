@@ -136,13 +136,13 @@ button:hover {
   margin: 0 var(--padding) var(--padding);
 }
 
-/******************* A ******************/
+/***************** HERO *****************/
 
 #heading > p:last-child {
   margin-bottom: 0;
 }
 
-#a {  
+#hero {  
   height: calc(100vh - (var(--padding) - 1px));
 
   display: flex;
@@ -205,12 +205,13 @@ button:hover {
 }
 
 /******************* B ******************/
+/***************** MAIN *****************/
 
-#b {
+main {
   padding-top: 0;
 }
 
-#b > .show {
+main > .show {
   min-height: calc(100vh - (var(--height-nav) + var(--padding) + 2px));
 
   overflow-y: scroll;
@@ -349,7 +350,7 @@ button:hover {
     position: relative;
   }
 
-  #a {
+  #hero {
       position: fixed;
       top: 0;
       left: 0;
@@ -357,7 +358,7 @@ button:hover {
       width: 40vw;
   }
 
-  #b {
+  main {
       margin-left: 40vw;
   }
 }
