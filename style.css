@@ -49,9 +49,14 @@ section {
   align-items: center;
 }
 
-img {
-  height: 1.6rem;
+#hero-pic {
+  width: 25%;
   aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.icon {
+  height: 1.6rem;
 }
 
 /******************************************************************************
