@@ -35,18 +35,14 @@
 section {
   min-height: 100vh;
   padding-top: 3.5rem;
-  
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
 }
 
-/* h1:not(#hero-name) {
-  margin-top: 4rem;
-} */
+h1:not(#hero-name) {
+  padding-top: 3.5rem;
+}
 
 h2:not(#hero-role) {
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 /******************************************************************************
@@ -62,6 +58,9 @@ h2:not(#hero-role) {
 ******************************************************************************/
 
 #hero {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
 }
 
