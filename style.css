@@ -38,11 +38,11 @@ section {
 }
 
 h1:not(#hero-name) {
-  padding-top: 3.5rem;
+  margin-top: 3.5rem;
 }
 
 h2:not(#hero-role), #experience-container {
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 /******************************************************************************
@@ -51,6 +51,15 @@ h2:not(#hero-role), #experience-container {
 
 .icon {
   height: 1.6rem;
+}
+
+.experience-card:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.experience-card-img {
+  height: 150px;
+  aspect-ratio: 1/1;
 }
 
 /******************************************************************************
