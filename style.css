@@ -41,7 +41,7 @@ h1:not(#hero-name) {
   padding-top: 3.5rem;
 }
 
-h2:not(#hero-role) {
+h2:not(#hero-role), #experience-container {
   padding-top: 2rem;
 }
 
