@@ -41,8 +41,8 @@ h1:not(#hero-name) {
   margin-top: 3.5rem;
 }
 
-h2:not(#hero-role), #experience-container {
-  margin-top: 2rem;
+#hero-pic, .subheading, .section-container, .experience-card:not(:first-child) {
+  margin-top: 3.5rem;
 }
 
 /******************************************************************************
@@ -51,10 +51,6 @@ h2:not(#hero-role), #experience-container {
 
 .icon {
   height: 1.6rem;
-}
-
-.experience-card:not(:first-child) {
-  margin-top: 3rem;
 }
 
 .experience-card-img {
@@ -83,6 +79,11 @@ h2:not(#hero-role), #experience-container {
   width: 250px;
   aspect-ratio: 1/1;
   border-radius: 50%;
+}
+
+#about-me {
+  width: 75%;
+  text-align: center;
 }
 
 /******************************************************************************

@@ -29,11 +29,10 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item"><a class="nav-link" href="#about">     About     </a></li>
               <li class="nav-item"><a class="nav-link" href="#skills">    Skills    </a></li>
               <li class="nav-item"><a class="nav-link" href="#projects">  Projects  </a></li>
               <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-              <li class="nav-item"><a class="nav-link" href="#contacts">  Contact   </a></li>
+              <li class="nav-item"><a class="nav-link" href="#contacts">  Contacts  </a></li>
             </ul>
           </div>
         </div>
@@ -53,9 +52,12 @@
             <h1 id="hero-name">Arnav Das</h1>
             <h2 id="hero-role">Fullstack Developer</h2>
 
+            <!--
+            <br>
             <div>
               <img class="icon" src="images/icons/location.svg">Vadodara, Gujarat, India
             </div>
+            -->
 
             <br>
             <div>
@@ -63,54 +65,56 @@
                 <img class="icon" src="images/icons/download.svg">
                 Resume
               </button>
+            <!--
             </div>
 
             <br>
             <div>
+            -->
               <a class="btn btn-dark" target="_blank" href="mailto:arnavrdas@gmail.com">            <img class="icon" src="images/icons/email.svg">   </a>
               <a class="btn btn-dark" target="_blank" href="https://www.linkedin.com/in/arnavrdas/"><img class="icon" src="images/icons/linkedin.svg"></a>
               <a class="btn btn-dark" target="_blank" href="https://github.com/arnavrdas/">         <img class="icon" src="images/icons/github.svg">  </a>
+            </div>
+
+            <br>
+            <br>
+            <div id="about-me">
+              <p>
+                <span class="highlight">Final year B.Tech CSE</span> student at GSFC University. <br>
+                <span class="highlight">Fullstack Developer Intern</span> at Inbox Infotech Pvt. Ltd.
+              </p>
+              <p>
+                Experienced in developing and deploying<br>
+                <span class="highlight">end-to-end solutions</span> for <span class="highlight">real users.</span>
+              </p>
+              <p>
+                Proficient in <span class="highlight">Node.js</span> and <span class="highlight">React.</span> <br>
+              </p>
             </div>
 
           </section>
         
         </div>
         <div class="col">
-
-          <!-- ABOUT -->
-          <section id="about">
-            <h1>About</h1>
-            <br>
-            <p>
-              <span class="highlight">Final year B.Tech CSE</span> student at GSFC University. <br>
-              <span class="highlight">Fullstack Developer Intern</span> at Inbox Infotech Pvt. Ltd.
-            </p>
-            <p>
-              Experienced in developing and deploying <span class="highlight">end-to-end solutions</span> for <span class="highlight">real users.</span>
-            </p>
-            <p>
-              Proficient in <span class="highlight">Node.js</span> and <span class="highlight">React.</span> <br>
-            </p>
-          </section>
           
           <!-- SKILLS -->
           <section id="skills">
             <h1>Skills</h1>
-            <h2>Backend</h2>
+            <h4 class="subheading">Backend</h4>
               <button type="button" class="btn btn-secondary">Node.js</button>
-            <h2>Frontend</h2>
+            <h4 class="subheading">Frontend</h4>
               <button type="button" class="btn btn-secondary">React</button>
               <button type="button" class="btn btn-secondary">Next.js</button>
               <button type="button" class="btn btn-secondary">React Native</button>
-            <h2>Deployment & CI/CD</h2>
+            <h4 class="subheading">Deployment & CI/CD</h4>
               <button type="button" class="btn btn-secondary">DigitalOcean</button>
               <button type="button" class="btn btn-secondary">Nginx</button>
               <button type="button" class="btn btn-secondary">Docker</button>
               <button type="button" class="btn btn-secondary">GitHub Actions</button>
-            <h2>Version Control</h2>
+            <h4 class="subheading">Version Control</h4>
               <button type="button" class="btn btn-secondary">Git</button>
               <button type="button" class="btn btn-secondary">GitHub</button>
-            <h2>Programming Languages</h2>
+            <h4 class="subheading">Programming Languages</h4>
               <button type="button" class="btn btn-secondary">Typescript</button>
               <button type="button" class="btn btn-secondary">Python</button>
               <button type="button" class="btn btn-secondary">Java</button>
@@ -121,13 +125,39 @@
           <!-- PROJECTS -->
           <section id="projects">
             <h1>Projects</h1>
+            <div class="section-container">
+
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  This is some text within a card body.
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  This is some text within a card body.
+                </div>
+              </div>
+
+            </div>
           </section>
           
           <!-- EXPERIENCE -->
           <section id="experience">
             <h1>Experience</h1>
-
-            <div id="experience-container" class="row gy-4">
+            <div class="section-container">
 
               <div class="experience-card card border-dark">
                 <div class="row g-0">
@@ -136,7 +166,7 @@
                   </div>
                   <div class="col">
                     <div class="card-body">
-                      <h5 class="card-title">Fullstack Developer Intern</h5>
+                      <h4 class="card-title">Fullstack Developer Intern</h4>
                       <p class="card-text">
                         Inbox Infotech Pvt. Ltd.<br>
                         Vadodara, Gujaratmd, India
@@ -154,7 +184,7 @@
                   </div>
                   <div class="col">
                     <div class="card-body">
-                      <h5 class="card-title">Data Science & Analysis Intern</h5>
+                      <h4 class="card-title">Data Science & Analysis Intern</h4>
                       <p class="card-text">
                         Amdox Technologies<br>
                         Bangalore, Karnataka, India
@@ -172,7 +202,7 @@
                   </div>
                   <div class="col">
                     <div class="card-body">
-                      <h5 class="card-title">Fullstack Developer Intern</h5>
+                      <h4 class="card-title">Fullstack Developer Intern</h4>
                       <p class="card-text">
                         CognifyZ Technologies<br>
                         Nagpur, Maharastra, India
@@ -190,7 +220,7 @@
                   </div>
                   <div class="col">
                     <div class="card-body">
-                      <h5 class="card-title">Fullstack Developer Intern</h5>
+                      <h4 class="card-title">Fullstack Developer Intern</h4>
                       <p class="card-text">
                         MaMo TechnoLabs LLP<br>
                         Vadodara, Gujarat, India
@@ -202,12 +232,11 @@
               </div>
 
             </div>
-
           </section>
           
           <!-- CONTACTS -->
           <section id="contacts">
-            <h1>Let's connect</h1>
+            <h1>Get in touch</h1>
           </section>
 
         </div>
