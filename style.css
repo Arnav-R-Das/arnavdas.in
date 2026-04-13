@@ -61,7 +61,7 @@ h2:not(#hero-role), #experience-container {
   height: 145px;
   aspect-ratio: 1/1;
 
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /******************************************************************************
