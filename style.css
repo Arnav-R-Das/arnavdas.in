@@ -28,21 +28,29 @@
 * ELEMENTS
 ******************************************************************************/
 
+:root {
+  --even-spacing: 3.5rem;
+}
+
 * {
   text-decoration: none;
-}
+}  
 
 section {
   min-height: 100vh;
-  padding-top: 3.5rem;
+  padding-top: var(--even-spacing);
 }
 
-h1:not(#hero-name) {
-  margin-top: 3.5rem;
-}
+/******************************************************************************
+* MISCELLANEOUS
+******************************************************************************/
 
-#hero-pic, .subheading, .section-container, .experience-card:not(:first-child) {
-  margin-top: 3.5rem;
+#hero-pic,
+h1:not(#hero-name),
+.subheading,
+.section-container,
+.section-card:not(:first-child) {
+  margin-top: var(--even-spacing);
 }
 
 /******************************************************************************
@@ -53,11 +61,15 @@ h1:not(#hero-name) {
   height: 1.6rem;
 }
 
-.experience-card-img {
+.section-card-img {
   height: 145px;
   aspect-ratio: 1/1;
 
   border-radius: 10px;
+}
+
+.section-card:last-child {
+  margin-bottom: var(--even-spacing);
 }
 
 .highlight {

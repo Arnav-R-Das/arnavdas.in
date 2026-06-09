@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arnav Das</title>
+
+    <!-- HANDLEBARS -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
     
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -40,7 +43,9 @@
     </nav>
 
     <main class="container" data-bs-theme="dark">
-      <div class="row">
+      <div class="row justify-content-between">
+
+        <!-- LEFT SPLIT -->
         <div class="col-12 col-xl-5">
 
           <!-- HERO -->
@@ -65,12 +70,6 @@
                 <img class="icon" src="images/icons/download.svg">
                 Resume
               </button>
-            <!--
-            </div>
-
-            <br>
-            <div>
-            -->
               <a class="btn btn-dark" target="_blank" href="mailto:arnavrdas@gmail.com">            <img class="icon" src="images/icons/email.svg">   </a>
               <a class="btn btn-dark" target="_blank" href="https://www.linkedin.com/in/arnavrdas/"><img class="icon" src="images/icons/linkedin.svg"></a>
               <a class="btn btn-dark" target="_blank" href="https://github.com/arnavrdas/">         <img class="icon" src="images/icons/github.svg">  </a>
@@ -80,164 +79,84 @@
             <br>
             <div id="about-me">
               <p>
-                <span class="highlight">Final year B.Tech CSE</span> student at GSFC University. <br>
+                <span class="highlight">Fresher B.Tech CSE</span> graduate. <br>
                 <span class="highlight">Fullstack Developer Intern</span> at Inbox Infotech Pvt. Ltd.
-              </p>
-              <p>
-                Experienced in developing and deploying<br>
-                <span class="highlight">end-to-end solutions</span> for <span class="highlight">real users.</span>
-              </p>
-              <p>
-                Proficient in <span class="highlight">Node.js</span> and <span class="highlight">React.</span> <br>
               </p>
             </div>
 
           </section>
         
         </div>
-        <div class="col">
+
+        <!-- RIGHT SPLIT -->
+        <div class="col col-xl-6">
           
           <!-- SKILLS -->
           <section id="skills">
             <h1>Skills</h1>
-            <h4 class="subheading">Backend</h4>
-              <button type="button" class="btn btn-secondary">Node.js</button>
-            <h4 class="subheading">Frontend</h4>
-              <button type="button" class="btn btn-secondary">React</button>
-              <button type="button" class="btn btn-secondary">Next.js</button>
-              <button type="button" class="btn btn-secondary">React Native</button>
-            <h4 class="subheading">Deployment & CI/CD</h4>
-              <button type="button" class="btn btn-secondary">DigitalOcean</button>
-              <button type="button" class="btn btn-secondary">Nginx</button>
-              <button type="button" class="btn btn-secondary">Docker</button>
-              <button type="button" class="btn btn-secondary">GitHub Actions</button>
-            <h4 class="subheading">Version Control</h4>
-              <button type="button" class="btn btn-secondary">Git</button>
-              <button type="button" class="btn btn-secondary">GitHub</button>
-            <h4 class="subheading">Programming Languages</h4>
-              <button type="button" class="btn btn-secondary">Typescript</button>
-              <button type="button" class="btn btn-secondary">Python</button>
-              <button type="button" class="btn btn-secondary">Java</button>
-              <button type="button" class="btn btn-secondary">C++</button>
-              <button type="button" class="btn btn-secondary">C</button>
+            <div id="skills-container" class="section-container">
+              <template id="skills-template">
+                <div>
+                  <h4 class="subheading">{{skill}}</h4>
+                  {{#each items}}
+                    <button type="button" class="btn btn-secondary">
+                      <span class="highlight">{{this}}</span>
+                    </button>
+                  {{/each}}
+                </div>
+              </template>
+            </div>
           </section>
           
           <!-- PROJECTS -->
           <section id="projects">
             <h1>Projects</h1>
-            <div class="section-container">
-
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div id="projects-container" class="section-container">
+              <template id="projects-card-template">
+                <div class="section-card card border-dark">
+                  <img src="images/{{img_src}}" class="card-img-top" alt="{{img_alt}}" />
+                  <div class="card-body">                    
+                    <h5 class="card-title">{{project_name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{tech_stack}}</h6>
+                    <p class="card-text">{{description}}</p>
+                    <a target="_blank" class="btn btn-primary" href="https://{{live_link}}.arnavdas.in">          <span class="highlight"> Live Link </span></a>
+                    <a target="_blank" class="btn btn-primary" href="http://github.com/arnavrdas/{{github_link}}"><span class="highlight"> GitHub    </span></a>
+                  </div>
                 </div>
-              </div>
-
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  This is some text within a card body.
-                </div>
-              </div>
-
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  This is some text within a card body.
-                </div>
-              </div>
-
-            </div>
+              </template>            
+            <div>
           </section>
           
           <!-- EXPERIENCE -->
           <section id="experience">
             <h1>Experience</h1>
-            <div class="section-container">
-
-              <div class="experience-card card border-dark">
-                <div class="row g-0">
-                  <div class="col-4 col-md-3 col-lg-2 col-xl-3">
-                    <img src="images/logos/inbox_infotech_logo.jpeg" class="img-fluid experience-card-img" alt="Logo of Inbox Infotech Pvt. Ltd.">
-                  </div>
-                  <div class="col">
-                    <div class="card-body">
-                      <h4 class="card-title">Fullstack Developer Intern</h4>
-                      <p class="card-text">
-                        Inbox Infotech Pvt. Ltd.<br>
-                        Vadodara, Gujaratmd, India
-                      </p>
-                      <p class="card-text"><small class="text-body-secondary">January 2026 - June 2026</small></p>
+            <div id="experience-container" class="section-container">
+              <template id="experience-card-template">
+                <div class="section-card card border-dark">
+                  <div class="row g-0">
+                    <div class="col-4 col-md-3 col-lg-2 col-xl-3">
+                      <img src="images/logos/{{img_src}}" class="img-fluid section-card-img" alt="Logo of {{company_name}}">
+                    </div>
+                    <div class="col">
+                      <div class="card-body">
+                        <h4 class="card-title">{{role}}</h4>
+                        <p class="card-text">
+                          {{company_name}}<br>
+                          {{location}}
+                        </p>
+                        <p class="card-text"><small class="text-body-secondary">{{duration}}</small></p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div class="experience-card card border-dark">
-                <div class="row g-0">
-                  <div class="col-4 col-md-3 col-lg-2 col-xl-3">
-                    <img src="images/logos/amdox_technologies_logo.jpeg" class="img-fluid experience-card-img" alt="Logo of Amdox Technologies">
-                  </div>
-                  <div class="col">
-                    <div class="card-body">
-                      <h4 class="card-title">Data Science & Analysis Intern</h4>
-                      <p class="card-text">
-                        Amdox Technologies<br>
-                        Bangalore, Karnataka, India
-                      </p>
-                      <p class="card-text"><small class="text-body-secondary">December 2025 - January 2026</small></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="experience-card card border-dark">
-                <div class="row g-0">
-                  <div class="col-4 col-md-3 col-lg-2 col-xl-3">
-                    <img src="images/logos/cognifyz_technologies_logo.jpeg" class="img-fluid experience-card-img" alt="Logo of CognifyZ Technologies">
-                  </div>
-                  <div class="col">
-                    <div class="card-body">
-                      <h4 class="card-title">Fullstack Developer Intern</h4>
-                      <p class="card-text">
-                        CognifyZ Technologies<br>
-                        Nagpur, Maharastra, India
-                      </p>
-                      <p class="card-text"><small class="text-body-secondary">June 2025 - July 2025</small></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="experience-card card border-dark">
-                <div class="row g-0">
-                  <div class="col-4 col-md-3 col-lg-2 col-xl-3">
-                    <img src="images/logos/mamo_technolabs_logo.jpeg" class="img-fluid experience-card-img" alt="Logo of MaMo TechnoLabs LLP">
-                  </div>
-                  <div class="col">
-                    <div class="card-body">
-                      <h4 class="card-title">Fullstack Developer Intern</h4>
-                      <p class="card-text">
-                        MaMo TechnoLabs LLP<br>
-                        Vadodara, Gujarat, India
-                      </p>
-                      <p class="card-text"><small class="text-body-secondary">December 2024 - January 2025</small></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              </template>
             </div>
           </section>
           
           <!-- CONTACTS -->
           <section id="contacts">
             <h1>Get in touch</h1>
-          </section>
+          </section>         
 
         </div>
       </div>
@@ -246,8 +165,112 @@
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   
-    <!-- CUSTOM -->
-    <script src="script.js"></script>
+    <script>
+
+      /******************************************************************************
+      * Render Reusable Components
+      ******************************************************************************/
+
+      // Data
+      const skills = [
+        {
+          skill: "Languages",
+          items: ["Typescript", "Python"],
+        },
+        {
+          skill: "Backend",
+          items: ["Express", "Fastify", "FastAPI"],
+        },
+        {
+          skill: "Databases",
+          items: ["PostgreSQL", "MongoDB", "Redis"],
+        },
+        {
+          skill: "Frontend",
+          items: ["React", "Next.js",],
+        },
+        {
+          skill: "Other",
+          items: ["Git", "GitHub", "Docker", "GitHub Actions"],
+        },
+      ]
+      const projects = [
+        {
+          project_name: "Ember — Dating site ",
+          tech_stack:   "Typescript, React, Node.js, Express, MongoDB, Mongoose",
+          description:  "Description...",
+          live_link:    "ember",
+          github_link:  "Ember-API",
+          img_src:      "project1.png",
+          img_alt:      "",
+        },
+        {
+          project_name: "SmartHire — AI Interviewer",
+          tech_stack:   "React, FastAPI, SQLAlchemy, SQLite",
+          description:  "Description...",
+          live_link:    "smarthire",
+          github_link:  "SmartHire",
+          img_src:      "project2.png",
+          img_alt:      "",
+        },
+      ]
+      const experiences = [
+        {
+          duration:     "January 2026 - June 2026",
+          company_name: "Inbox Infotech Pvt. Ltd.",
+          location:     "Vadodara, India",
+          role:         "Fullstack Developer Intern",
+          img_src:      "inbox_infotech_logo.jpeg",
+        },
+        {
+          duration:     "December 2025 - January 2026",
+          company_name: "Amdox Technologies",
+          location:     "Bangalore, India",
+          role:         "Data Science & Analysis Intern",
+          img_src:      "amdox_technologies_logo.jpeg",
+        },
+        {
+          duration:     "June 2025 - July 2026",
+          company_name: "CognifyZ Technologies",
+          location:     "Nagpur, India",
+          role:         "Fullstack Developer Intern",
+          img_src:      "cognifyz_technologies_logo.jpeg",
+        },
+        {
+          duration:     "December 2024 - January 2025",
+          company_name: "MaMo TechnoLabs LLP",
+          location:     "Vadodara, India",
+          role:         "Fullstack Developer Intern",
+          img_src:      "mamo_technolabs_logo.jpeg",
+        }
+      ]
+      
+      function render(container, template, data) {
+
+        // Compile Template
+        const compiledTemplate = Handlebars.compile(    // Compiles the template & creates a reusable render function
+          document.getElementById(template)
+          .content                                      // Returns a DocumentFragment
+            .firstElementChild                          // Gets the root element inside it 
+            .outerHTML                                  // Converts that element into a string. Handlebars needs a string template.
+        )
+
+        // Generate HTML
+        let html = ""
+        data.forEach((data_item) => html += compiledTemplate(data_item))
+
+        // Insert generated HTML into container
+        document.getElementById(container).innerHTML = html
+      }
+
+      // Render
+      document.addEventListener("DOMContentLoaded", () => {
+        render("skills-container",     "skills-template",          skills)
+        render("projects-container",   "projects-card-template",   projects)
+        render("experience-container", "experience-card-template", experiences)
+      })
+
+    </script>
 
   </body>
 </html>
