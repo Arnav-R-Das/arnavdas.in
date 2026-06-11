@@ -11,17 +11,24 @@
     
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
+
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+      :root {
+        --color-hero:   hsl(210, 10%, 19%);
+        --color-footer: hsl(210, 10%, 10%);
+      }
+    </style>
 
   </head>
   <body data-bs-theme="dark">
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+    <nav class="navbar navbar-expand-md bg-black fixed-top">
       <div class="container-md">
-        <a class="navbar-brand" href="#">Arnav Das</a>
+        <a class="navbar-brand highlight" href="#">Arnav Das</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,41 +39,63 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item"><a class="nav-link btn btn-secondary" role="button" href="#skills">    Skills    </a></li>
-              <li class="nav-item"><a class="nav-link btn btn-secondary" role="button" href="#projects">  Projects  </a></li>
-              <li class="nav-item"><a class="nav-link btn btn-secondary" role="button" href="#experience">Experience</a></li>
-              <li class="nav-item"><a class="nav-link btn btn-secondary" role="button" href="#contacts">  Contacts  </a></li>
+              <li class="nav-item"><a class="nav-link highlight btn btn-dark" role="button" href="#skills-section">    Skills    </a></li>
+              <li class="nav-item"><a class="nav-link highlight btn btn-dark" role="button" href="#projects-section">  Projects  </a></li>
+              <li class="nav-item"><a class="nav-link highlight btn btn-dark" role="button" href="#experience-section">Experience</a></li>
+              <li class="nav-item"><a class="nav-link highlight btn btn-dark" role="button" href="#contacts-section">  Contacts  </a></li>
             </ul>
           </div>
         </div>
       </div>
     </nav>
 
-    <main class="container" data-bs-theme="dark">
+    <main class="container">
       <div class="row justify-content-between">
 
         <!-- LEFT SPLIT -->
         <div class="col-12 col-xl-5">
 
           <!-- HERO -->
-          <section id="hero">
+          <section id="hero" style="
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
 
-            <img id="hero-pic" src="./images/Arnav_Das.jpg">
+            background-color: var(--color-hero);
+          ">
+
+            <img id="hero-pic" src="./images/Arnav_Das.jpg" style="
+              width: 250px;
+              aspect-ratio: 1/1;
+              border-radius: 50%;
+            ">
 
             <br>
             <h1 id="hero-name">Arnav Das</h1>
-            <h2 id="hero-role">Fullstack Developer</h2>
+            <h4 id="hero-role">Full-Stack Developer</h4>
 
-            <!--
-            <br>
+            <!-- <br>
             <div>
-              <img class="icon" src="images/icons/location.svg">Vadodara, Gujarat, India
+              <img class="icon" src="images/icons/location.svg">
+              Vadodara, Gujarat, India
+            </div> -->
+
+            <br>
+            <div style="
+              width: 75%;
+              text-align: center;
+            ">
+              <p>
+                <!-- <span class="highlight">Fresher B.Tech CSE</span> graduate. <br>
+                <span class="highlight">Full-Stack Developer Intern</span> at Inbox Infotech Pvt. Ltd. -->
+                <span style="font-style: italic;">I provide end-to-end full-stack solutions and integrate AI-models, using Typescript (React, Express) and Python (FastAPI).</span>
+              </p>
             </div>
-            -->
 
             <br>
             <div>
-              <a class="btn btn-primary" target="_blank" href="resume/CV_Arnav_Das.pdf">
+              <a class="btn btn-success" target="_blank" href="resume/CV_Arnav_Das.pdf">
                 <!-- <img class="icon" src="images/icons/download.svg"> --> 
                 <span class="highlight">Resume</span>
               </a>
@@ -75,42 +104,52 @@
               <a class="btn btn-dark"   target="_blank" href="https://github.com/arnavrdas/">         <img class="icon" src="images/icons/github.svg">  </a>
             </div>
 
+            <!-- <br>
             <br>
-            <br>
-            <div id="about-me">
+            <div style="
+              width: 75%;
+              text-align: center;
+            ">
               <p>
-                <span class="highlight">Fresher B.Tech CSE</span> graduate. <br>
-                <span class="highlight">Fullstack Developer Intern</span> at Inbox Infotech Pvt. Ltd.
+                Last updated on: 11th June, 2026
               </p>
-            </div>
+            </div> -->
 
           </section>
-        
+
         </div>
 
         <!-- RIGHT SPLIT -->
         <div class="col col-xl-6">
           
           <!-- SKILLS -->
-          <section id="skills">
-            <h1>Skills</h1>
+          <section id="skills-section">
+            <h3 class="section-header">Skills</h3>
             <div id="skills-container" class="section-container">
               <template id="skills-template">
+
                 <div>
-                  <h4 class="subheading">{{skill}}</h4>
+                  <h5 class="subheading">{{skill}}</h5>
                   {{#each items}}
-                    <button type="button" class="btn btn-secondary">
-                      <span class="highlight">{{this}}</span>
-                    </button>
+                    <span class="skill-span" style="
+                        background-color: var(--bs-border-color);
+                        padding: 0.325rem;
+                        line-height: 2.325rem;
+                        margin-right: 0.25rem;
+                        border-radius: 0.5rem;
+                    ">
+                      {{this}}
+                    </span>
                   {{/each}}
                 </div>
+                
               </template>
             </div>
           </section>
           
           <!-- PROJECTS -->
-          <section id="projects">
-            <h1>Projects</h1>
+          <section id="projects-section">
+            <h3 class="section-header">Projects</h3>
             <div id="projects-container" class="section-container">
               <template id="projects-card-template">
                 <div class="section-card card border-dark">
@@ -128,10 +167,11 @@
           </section>
           
           <!-- EXPERIENCE -->
-          <section id="experience">
-            <h1>Experience</h1>
+          <section id="experience-section">
+            <h3 class="section-header">Experience</h3>
             <div id="experience-container" class="section-container">
               <template id="experience-card-template">
+
                 <div class="section-card card border-dark">
                   <div class="row g-0">
                     <div class="col-4 col-md-3 col-lg-2 col-xl-3">
@@ -139,28 +179,39 @@
                     </div>
                     <div class="col">
                       <div class="card-body">
-                        <h4 class="card-title">{{role}}</h4>
+                        <h5 class="card-title">{{role}}</h5>
                         <p class="card-text">
-                          {{company_name}}<br>
-                          {{location}}
+                          <span class="highlight">{{company_name}}</span><br>
+                          {{location}}<br>
+                          <small class="text-body-secondary">{{duration}}</small>
+                          <ul>
+                            {{#each responsibilities}}
+                              <li>{{this}}</li>
+                            {{/each}}
+                          </ul>
                         </p>
-                        <p class="card-text"><small class="text-body-secondary">{{duration}}</small></p>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </template>
             </div>
           </section>
-          
-          <!-- CONTACTS -->
-          <section id="contacts">
-            <h1>Get in touch</h1>
-          </section>         
 
         </div>
+
       </div>
     </main>
+
+    <footer class="container" style="
+      background-color: var(--color-footer);
+      box-shadow: 50vw 0 var(--color-footer), -50vw 0 var(--color-footer)
+    ">
+      <section id="contacts-section">
+        <h3 class="section-header">Get in touch</h3>
+      </section>
+    </footer>
 
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
@@ -213,35 +264,61 @@
           img_src:      "project2.png",
           img_alt:      "",
         },
+        {
+          project_name: "Another Project — Something",
+          tech_stack:   "Tech Stack...",
+          description:  "Description...",
+          live_link:    "",
+          github_link:  "",
+          img_src:      "",
+          img_alt:      "",
+        },
       ]
       const experiences = [
         {
-          duration:     "January 2026 - June 2026",
-          company_name: "Inbox Infotech Pvt. Ltd.",
-          location:     "Vadodara, India",
-          role:         "Fullstack Developer Intern",
-          img_src:      "inbox_infotech_logo.jpeg",
+          duration:         "January 2026 - June 2026",
+          company_name:     "Inbox Infotech Pvt. Ltd.",
+          location:         "Vadodara, India",
+          role:             "Fullstack Developer Intern",
+          responsibilities: [
+            "Engineered a reusable microservice starter template using Node.js, TypeScript, Fastify, Zod, Prisma, Biome, and Docker; enabling faster backend service development across projects.",
+            "Developed an electronics e-commerce prototype (MERN stack); featuring API rate limiting, type-safety (Typescript), schema validation (Zod), API docs, API testing (Vitest), CI/CD pipeline (GitHub Actions) and Dockerized deployment.",
+            "Fixed UI bugs in a React Native mobile app.",
+          ],
+          img_src:          "inbox_infotech_logo.jpeg",
         },
         {
-          duration:     "December 2025 - January 2026",
-          company_name: "Amdox Technologies",
-          location:     "Bangalore, India",
-          role:         "Data Science & Analysis Intern",
-          img_src:      "amdox_technologies_logo.jpeg",
+          duration:         "December 2025 - January 2026",
+          company_name:     "Amdox Technologies",
+          location:         "Bangalore, India",
+          role:             "Data Science & Analysis Intern",
+          responsibilities: [
+            "Completed formal training in data science concepts, workflows, and machine learning fundamentals.",
+            "Developed an AI-based employee sentiment & stress detection system that analyzed emotional and mental state indicators, automated task allocation, and reported critical cases to management or medical professionals when required.",
+            "Implemented sentiment analysis using NLP, stress/emotion classification model, and task recommendation engine.",
+          ],
+          img_src:          "amdox_technologies_logo.jpeg",
         },
         {
-          duration:     "June 2025 - July 2026",
-          company_name: "CognifyZ Technologies",
-          location:     "Nagpur, India",
-          role:         "Fullstack Developer Intern",
-          img_src:      "cognifyz_technologies_logo.jpeg",
+          duration:         "June 2025 - July 2026",
+          company_name:     "CognifyZ Technologies",
+          location:         "Nagpur, India",
+          role:             "Fullstack Developer Intern",
+          responsibilities: [
+            "Developed & deployed an electronics e-commerce web application using MERN stack.",
+            "Implemented RESTful API, modular architecture, JWT auth, role-based access and payment gateway (Stripe)."
+          ],
+          img_src:          "cognifyz_technologies_logo.jpeg",
         },
         {
-          duration:     "December 2024 - January 2025",
-          company_name: "MaMo TechnoLabs LLP",
-          location:     "Vadodara, India",
-          role:         "Fullstack Developer Intern",
-          img_src:      "mamo_technolabs_logo.jpeg",
+          duration:         "December 2024 - January 2025",
+          company_name:     "MaMo TechnoLabs LLP",
+          location:         "Vadodara, India",
+          role:             "Fullstack Developer Intern",
+          responsibilities: [
+            "Developed & deployed a furniture e-commerce platform using PHP & MySQL; featuring admin inventory management, search with filters/sorting, cart & wishlist, and responsive UI."
+          ],
+          img_src:          "mamo_technolabs_logo.jpeg",
         }
       ]
       
