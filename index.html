@@ -182,15 +182,23 @@
                         <h5 class="card-title">{{role}}</h5>
                         <p class="card-text">
                           <span class="highlight">{{company_name}}</span><br>
-                          {{location}}<br>
+                          {{location}}
+                        </p>
+                        <p class="card-text">
                           <small class="text-body-secondary">{{duration}}</small>
-                          <ul>
-                            {{#each responsibilities}}
-                              <li>{{this}}</li>
-                            {{/each}}
-                          </ul>
                         </p>
                       </div>
+                    </div>
+                  </div>
+                  <div class="row g-0">
+                    <div class="col-0 col-md-3 col-lg-2 col-xl-3"></div>
+                    <div class="col">
+                      <br>
+                      <ul>
+                        {{#each responsibilities}}
+                          <li>{{this}}</li>
+                        {{/each}}
+                      </ul>
                     </div>
                   </div>
                 </div>
