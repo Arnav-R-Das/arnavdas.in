@@ -23,6 +23,10 @@
   border-radius: ;
 } */
 
+/**************************************************
+* ELEMENTS
+**************************************************/
+
 :root {
   --even-spacing: 3.5rem;
 
@@ -30,50 +34,115 @@
   --color-tertiary:   hsl(210, 10%, 19.0%);
   --color-dark:       hsl(210, 10%, 14.5%); */
 
-  --color-hero: hsl(210, 10%, 19%);
+  --color: 3%;
+
+  --color-nav:       hsl(213.5, 50%, calc(var(--color)* 1));
+  --color-nav-hover: hsl(213.5, 50%, calc(var(--color)* 3));
+
+  --color-hero:      hsl(213.5, 50%, calc(var(--color)* 3));
+  
+  --color-main:      hsl(213.5, 50%, calc(var(--color)* 4));
+  --color-cards:     hsl(213.5, 50%, calc(var(--color)* 5));
+
+  --color-btn:       hsl(213.5, 75%, 30%);
+  --color-btn-hover: hsl(213.5, 75%, 20%);
+  
+  --color-footer:    hsl(213.5, 50%, calc(var(--color)* 2));
 }
 
-* {
-  text-decoration: none;
+body {
+  background-color: var(--color-main);
 }
 
+main {
+  background-color: var(--color-main);
+}
+      
 section {
-  min-height: 100vh;
+  min-height: 100svh;
   padding-top: var(--even-spacing);
+}
+
+a {
+  text-decoration: none;
 }
 
 /**************************************************
 * CLASSES
 **************************************************/
 
-.icon {
-  height: 1.6rem;
+.nav-btn {
+  background-color: var(--color-nav);
+  border-color:     var(--color-nav);
 }
 
-.section-card-img {
-  height: 145px;
-  aspect-ratio: 1/1;
-
-  border-radius: 10px;
+.icon {
+  height: 1.6rem;
 }
 
 .highlight {
   font-weight: bold;
 }
 
+.section-card {
+  background-color: var(--color-cards);
+  border-color: var(--color-cards);
+  contain: layout paint;
+}
+
+.main-btn {
+  background-color: var(--color-btn);
+  border-color:     var(--color-btn);
+}
+
 /**************************************************
-* SECTION TOP MARGIN
+* SHARED
 **************************************************/
 
-#hero-pic,
+nav,
+.offcanvas {
+  background-color: var(--color-nav);
+}
+
+#hero > :first-child,
 .section-header,
 .subheading,
 .section-container,
 .section-card:not(:first-child) {
   margin-top: var(--even-spacing);
 }
+
+#hero > :last-child,
+#more-projects-btn,
 .section-card:last-child {
   margin-bottom: var(--even-spacing);
+}
+
+section:not(
+  #hero,
+  #experience,
+  #contacts
+) {
+  border-bottom: 2px solid gray;
+}
+
+.section-card,
+.img-border-radius {
+  border-radius: 0.5rem;
+}
+
+/**************************************************
+* EVENTS
+**************************************************/
+
+.nav-btn:hover {
+  background-color: var(--color-nav-hover);
+  border-color:     var(--color-nav-hover);
+}
+
+.main-btn:hover {
+  background-color: var(--color-btn-hover);
+  border-color:     var(--color-btn-hover);
 }
 
 /**************************************************
@@ -81,7 +150,10 @@ section {
 **************************************************/
 
 #hero {
-  box-shadow: 50vw 0 0 0 var(--color-hero), -50vw 0 0 0 var(--color-hero);
+  padding-left:  2rem;
+  padding-right: 2rem;
+  
+  box-shadow: 25vw 0 var(--color-hero), -25vw 0 var(--color-hero);
 }
 
 @media (min-width: 1200px) {
@@ -89,7 +161,14 @@ section {
     position: sticky;
     top: 0;
 
-    box-shadow: -100vw -100vw 0 100vw var(--color-hero);
+    box-shadow: -25vw -25vw 0 25vw var(--color-hero);
+  }
+
+  section:not(
+    #hero,
+    #contacts
+  ) {
+    margin-left: 3rem;
   }
 }
 
