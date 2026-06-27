@@ -6,39 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arnav Das</title>
 
-    <style>
-      #content {
-        display: none;
-      }
-    </style>
-    
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- LINKS -->
 
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="style.css">
+      <!-- FAVICON -->
+      <link rel="icon" type="image/x-icon" href="images/me/Arnav_Das.png">
+
+      <!-- BOOTSTRAP -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+      <!-- CUSTOM CSS -->
+      <link rel="stylesheet" href="style.css">
 
   </head>
   <body data-bs-theme="dark">
 
-    <!-- SPINNER -->
-    <div id="spinner" style="
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100svh;
-    ">
-      <div class="spinner-border text-primary" role="status">
-        <span class="visually-hidden" style="color: white">Loading...</span>
-      </div>
-    </div>
-
-    <div id="content">
-
+    <header>
       <!-- NAVBAR -->
-      <nav class="navbar navbar-expand-md fixed-top">
-        <div class="container-md">
-          <a class="navbar-brand highlight" href="#">Arnav Das</a>
+      <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container-xxl">
+          <a class="navbar-brand highlight" href="#">
+            <!-- <img loading="lazy" src="images/me/Arnav_Das.png" width="24" height="24" class="d-inline-block align-text-top" style="margin-right: 6px;"> -->
+            Arnav Das
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -58,209 +47,207 @@
           </div>
         </div>
       </nav>
+    </header>
 
-      <main class="container">
-        <div class="row" style="justify-content: center;">
+    <main class="container-xxl">
 
-          <!-- LEFT SPLIT -->
-          <div class="col-12 col-xl-4">
-
-            <!-- HERO -->
-            <section id="hero" style="
-              display: flex;
-              flex-flow: column nowrap;
-              justify-content: center;
-              align-items: center;
-
-              background-color: var(--color-hero);
-            ">
-
-              <img loading="lazy" id="hero-pic" src="./images/Arnav_Das.jpg" style="
-                width: 250px;
-                aspect-ratio: 1/1;
-                border-radius: 50%;
-              ">
-
-              <br>
-              <h1 id="hero-name">Arnav Das</h1>
-              <h4 id="hero-role">Full-Stack Developer</h4>
-
-              <!-- <br>
-              <div>
-                <img loading="lazy" class="icon" src="images/icons/location.svg">
-                Vadodara, Gujarat, India
-              </div> -->
-
-              <br>
-              <div style="
-                max-width: 30rem;
-                text-align: center;
-              ">
-                <p>
-                  <!-- <span class="highlight">Fresher B.Tech CSE</span> graduate. <br>
-                  <span class="highlight">Full-Stack Developer Intern</span> at Inbox Infotech Pvt. Ltd. -->
-                  <span style="font-style: italic;">I provide end-to-end full-stack solutions and integrate AI-models, using Typescript (React, Express) and Python (FastAPI).</span>
-                </p>
-              </div>
-
-              <br>
-              <div id="links-div">
-                <a class="btn btn-success" target="_blank" href="resume/CV_Arnav_Das.pdf">
-                  <!-- <img loading="lazy" class="icon" src="images/icons/download.svg"> --> 
-                  <span class="highlight">Resume</span>
-                </a>
-                <a class="btn main-btn" target="_blank" href="mailto:arnavrdas@gmail.com">            <img loading="lazy" class="icon" src="images/icons/email.svg">   </a>
-                <a class="btn main-btn" target="_blank" href="https://www.linkedin.com/in/arnavrdas/"><img loading="lazy" class="icon" src="images/icons/linkedin.svg"></a>
-                <a class="btn main-btn" target="_blank" href="https://github.com/arnavrdas/">         <img loading="lazy" class="icon" src="images/icons/github.svg">  </a>
-              </div>
-
-              <!-- <br>
-              <br>
-              <div style="
-                width: 75%;
-                text-align: center;
-              ">
-                <p>
-                  Last updated on: 11th June, 2026
-                </p>
-              </div> -->
-
-            </section>
-
-          </div>
-
-          <!-- RIGHT SPLIT -->
-          <div class="col col-xl-8">
-            
-            <!-- SKILLS -->
-            <section id="skills">
-              <h3 class="section-header">Skills</h3>
-              <div id="skills-container" class="section-container">
-                <template id="skills-template">
-
-                  <div>
-                    <h5 class="subheading">{{skill}}</h5>
-                    {{#each items}}
-                      <span class="skill-span" style="
-                          /* background-color: var(--color-cards); */
-                          /* padding: 0.325rem; */
-                          line-height: 2.325rem;
-                          margin-right: 0.375rem;
-                          /* border-radius: 0.5rem; */
-                      ">
-                        {{this}}{{#unless @last}},{{/unless}}
-                      </span>
-                    {{/each}}
-                  </div>
-                  
-                </template>
-              </div>
-            </section>
-            
-            <!-- PROJECTS -->
-            <section id="projects">
-              <h3 class="section-header">Projects</h3>
-              <div id="projects-container" class="section-container">
-                <template id="projects-card-template">
-
-                  <div class="section-card card" style="
-                    padding: 0.5rem;
-                  ">
-                    <div class="card-body">
-
-                      <div class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          {{#each screenshots}}
-                            <div class="carousel-item {{#if @first}}active{{/if}}" data-bs-interval="3000" style="
-                              margin-bottom: 1.5rem;
-                            ">
-                              <img loading="lazy" src="images/{{this}}" class="d-block w-100" style="
-                                max-height: 15rem;
-                                object-fit: contain;
-                              ">
-                            </div>
-                          {{/each}}
-                        </div>
-                      </div>
-
-                      <h5 class="card-title">{{project_name}}</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">{{tech_stack}}</h6>
-                      <p class="card-text">{{description}}</p>
-                      
-                      <a class="btn main-btn" target="_blank" href="https://{{live_link}}.arnavdas.in">          <span class="highlight"> Live Link </span></a>
-                      <a class="btn main-btn" target="_blank" href="https://github.com/arnavrdas/{{github_link}}"><span class="highlight"> GitHub    </span></a>
-                    </div>
-                  </div>
-
-                </template>
-              </div>
-              
-              <a id="more-projects-btn" class="btn main-btn" target="_blank" href="https://arnavdas.in/more-projects">
-                <span class="highlight">More Projects</span>
-              </a>
-            </section>
-            
-            <!-- EXPERIENCE -->
-            <section id="experience">
-              <h3 class="section-header">Experience</h3>
-              <div id="experience-container" class="section-container">
-                <template id="experience-card-template">
-
-                  <div class="section-card card" style="
-                    padding:1.5rem;
-                  ">
-                    <div class="row g-0">
-                      <div class="col-4 col-md-3 col-lg-2 col-xl-3">
-                        <img loading="lazy" src="images/logos/{{img_src}}" class="img-fluid img-border-radius" alt="Logo of {{company_name}}" style="
-                          height: 145px;
-                          aspect-ratio: 1/1;
-                        ">
-                      </div>
-                      <div class="col">
-                        <div class="card-body">
-                          <h5 class="card-title">{{role}}</h5>
-                          <p class="card-text">
-                            <span class="highlight">{{company_name}}</span><br>
-                            {{location}}
-                          </p>
-                          <p class="card-text">
-                            <small class="text-body-secondary">{{duration}}</small>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row g-0">
-                      <div class="col-0 col-md-3 col-lg-2 col-xl-3"></div>
-                      <div class="col">
-                        <br>
-                        <ul>
-                          {{#each responsibilities}}
-                            <li>{{this}}</li>
-                          {{/each}}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                </template>
-              </div>
-            </section>
-
-          </div>
-
-        </div>
-      </main>
-
-      <footer class="container" style="
-        background-color: var(--color-footer);
-        box-shadow: 25vw 25vw 0 25vw var(--color-footer), -25vw 25vw 0 25vw var(--color-footer)
+      <!-- HERO -->
+      <section id="hero" style="
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
       ">
-        <section id="contacts">
-          <h3 class="section-header">Get in touch</h3>
-        </section>
-      </footer>
 
-    </div>
+        <img loading="lazy" id="hero-pic" src="images/me/Arnav_Das.jpg" style="
+          width: 250px;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+        ">
+
+        <br>
+        <h1 id="hero-name">Arnav Das</h1>
+        <h4 id="hero-role">Full-Stack Developer</h4>
+        
+        <br>
+        <span style="
+          max-width: 30rem;
+          text-align: center;
+          font-style: italic;
+        ">
+          I turns your ideas into user-focused web solutions
+          <br>using Typescript (React, Express) and Python (FastAPI).
+        </span>
+
+        <!-- <br>
+        <div>
+          <img loading="lazy" class="icon" src="images/icons/location.svg">
+          Vadodara, Gujarat, India
+        </div> -->
+
+        <br>
+        <div>
+          <a class="btn btn-success" target="_blank" href="resume/CV_Arnav_Das.pdf">
+            <!-- <img loading="lazy" class="icon" src="images/icons/download.svg"> -->
+            <span class="highlight">Resume</span>
+          </a>
+          <div id="links-container" style="display: inline-block;">
+            <template id="link-btn-template">
+              <a class="btn main-btn" target="_blank" href="{{link}}" style="margin-right: 4px;">
+                <img loading="lazy" class="icon" src="images/icons/{{icon}}.svg">
+              </a>
+            </template>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h3 class="section-header">Skills</h3>
+        <div id="skills-container">
+          <template id="skills-template">
+
+            <div>
+              <h5 class="subheading">{{skill}}</h5>
+              {{#each items}}
+                <span class="skill-span" style="
+                    /* background-color: var(--color-cards); */
+                    /* padding: 0.325rem; */
+                    line-height: 2.325rem;
+                    margin-right: 0.375rem;
+                    /* border-radius: 0.5rem; */
+                ">
+                  {{this}}{{#unless @last}},{{/unless}}
+                </span>
+              {{/each}}
+            </div>
+
+          </template>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h3 class="section-header">Projects</h3>
+        <div class="container-fluid">
+          <div id="projects-container" class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4">
+
+            <template id="projects-card-template">
+              <div class="col">
+                <div class="section-card card" style="padding: 0.5rem;">
+                  <div class="card-body">
+
+                    <div class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        {{#each screenshots}}
+                          <div class="carousel-item {{#if @first}}active{{/if}}" data-bs-interval="3000" style="
+                            margin-bottom: 1.5rem;
+                          ">
+                            <img loading="lazy" src="images/screenshots/{{../screenshots_directory}}/{{this}}.png" class="d-block w-100" style="
+                              max-height: 15rem;
+                              object-fit: contain;
+                            ">
+                          </div>
+                        {{/each}}
+                      </div>
+                    </div>
+
+                    <h5 class="card-title">{{project_name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{tech_stack}}</h6>
+                    <p class="card-text">{{description}}</p>
+
+                    <a class="btn main-btn" target="_blank" href="https://{{live_link}}.arnavdas.in">           <span class="highlight"> Live Demo </span></a>
+                    <a class="btn main-btn" target="_blank" href="https://github.com/arnavrdas/{{github_link}}"><span class="highlight"> GitHub    </span></a>
+
+                  </div>
+                </div>
+              </div>
+            </template>
+
+          </div>
+        </div>
+
+        <a id="more-projects-btn" class="btn main-btn" target="_blank" href="/more-projects">
+          <span class="highlight">More Projects</span>
+        </a>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <h3 class="section-header">Experience</h3>
+        <div id="experience-container">
+          <template id="experience-card-template">
+
+            <div class="section-card card" style="
+              padding:1.5rem;
+            ">
+              <div class="row g-0">
+                <div class="col-4 col-md-3 col-lg-2 col-xl-2">
+                  <img loading="lazy" src="images/logos/{{img_src}}" class="img-fluid img-border-radius" alt="Logo of {{company_name}}" onclick="window.open('https://{{company_website}}', '_blank')" style="
+                    height: 145px;
+                    aspect-ratio: 1/1;
+                  ">
+                </div>
+                <div class="col">
+                  <div class="card-body">
+                    <h5 class="card-title">{{role}}</h5>
+                    <p class="card-text">
+                      <a target="_blank" href="https://{{company_website}}">
+                        <span class="highlight">{{company_name}}</span>
+                        <img loading="lazy" src="images/icons/link-2.svg" height="18" class="d-inline-block align-text-top">
+                      </a>
+                      <br>{{location}}
+                    </p>
+                    <p class="card-text">
+                      <small class="text-body-secondary">{{duration}}</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-0 col-md-3 col-lg-2 col-xl-2"></div>
+                <div class="col">
+                  <br>
+                  <ul>
+                    {{#each responsibilities}}
+                      <li>{{this}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </template>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="container-xxl" style="
+      background-color: var(--color-footer);
+      box-shadow: 25vw 25vw 0 25vw var(--color-footer), -25vw 25vw 0 25vw var(--color-footer)
+    ">
+      <section id="contacts">
+        <!-- <h3 class="section-header">Get in touch</h3> -->
+        <div id="contacts-container" style="
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-evenly;
+        ">
+          <template id="contacts-card-template">
+
+            <div>
+              <a target="_blank" href="{{link}}">
+                <img loading="lazy" class="icon" src="images/icons/{{icon}}.svg">
+                {{show}}
+              </a>
+            </div>
+
+          </template>
+        </div>
+      </section>
+    </footer>
 
     <!-- HANDLEBARS -->
     <script defer src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
@@ -300,19 +287,21 @@
       const projects = [
         {
           project_name: "Ember — Dating site ",
-          tech_stack:   "Typescript, React, Node.js, Express, MongoDB, Mongoose",
+          tech_stack:   "Typescript, React, Node.js, Express, Prisma MongoDB, Mongoose",
           description:  "Description...",
           live_link:    "ember",
-          github_link:  "Ember-API",
-          screenshots:  [],
+          github_link:  "Ember",
+          screenshots_directory: "ember",
+          screenshots:  ["4", "5", "6", "8"],
         },
         {
           project_name: "SmartHire — AI Interviewer",
-          tech_stack:   "React, FastAPI, SQLAlchemy, SQLite",
+          tech_stack:   "React, Python, FastAPI, SQLAlchemy, PostgreSQL",
           description:  "Description...",
           live_link:    "smarthire",
           github_link:  "SmartHire",
-          screenshots:  [],
+          screenshots_directory: "smarthire",
+          screenshots:  ["auth/1", "recruiter/2", "candidate/5", "candidate/11"],
         },
         {
           project_name: "Another Project — Something",
@@ -320,6 +309,7 @@
           description:  "Description...",
           live_link:    "",
           github_link:  "",
+          screenshots_directory: "",
           screenshots:  [],
         },
       ]
@@ -327,6 +317,7 @@
         {
           duration:         "January 2026 - June 2026",
           company_name:     "Inbox Infotech Pvt. Ltd.",
+          company_website:  "inboxtechs.com",
           location:         "Vadodara, India",
           role:             "Fullstack Developer Intern",
           responsibilities: [
@@ -339,6 +330,7 @@
         {
           duration:         "December 2025 - January 2026",
           company_name:     "Amdox Technologies",
+          company_website:  "amdox.in",
           location:         "Bangalore, India",
           role:             "Data Science & Analysis Intern",
           responsibilities: [
@@ -351,6 +343,7 @@
         {
           duration:         "June 2025 - July 2026",
           company_name:     "CognifyZ Technologies",
+          company_website:  "cognifyz.com",
           location:         "Nagpur, India",
           role:             "Fullstack Developer Intern",
           responsibilities: [
@@ -362,6 +355,7 @@
         {
           duration:         "December 2024 - January 2025",
           company_name:     "MaMo TechnoLabs LLP",
+          company_website:  "mamotechnolabs.com",
           location:         "Vadodara, India",
           role:             "Fullstack Developer Intern",
           responsibilities: [
@@ -370,7 +364,24 @@
           img_src:          "mamo_technolabs_logo.jpeg",
         }
       ]
-      
+      const contacts = [
+        {
+          show: "arnavrdas@gmail.com",
+          link: "mailto:arnavrdas@gmail.com",
+          icon: "email",
+        },
+        {
+          show: "linkedin.com/in/arnavrdas",
+          link: "https://www.linkedin.com/in/arnavrdas/",
+          icon: "linkedin",
+        },
+        {
+          show: "github.com/arnavrdas",
+          link: "https://github.com/arnavrdas/",
+          icon: "github",
+        },
+      ]
+
       function render(container, template, data) {
 
         // Compile Template
@@ -391,12 +402,11 @@
 
       // Render
       document.addEventListener("DOMContentLoaded", () => {
+        render("links-container",      "link-btn-template",        contacts)
         render("skills-container",     "skills-template",          skills)
         render("projects-container",   "projects-card-template",   projects)
         render("experience-container", "experience-card-template", experiences)
-
-        document.getElementById("spinner").style.display = "none"
-        document.getElementById("content").style.display = "block"
+        render("contacts-container",   "contacts-card-template",   contacts)
       })
 
       /******************************************************************************
@@ -415,7 +425,7 @@
         })
       })
 
+      
     </script>
-
   </body>
 </html>

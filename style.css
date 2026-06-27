@@ -28,7 +28,7 @@
 **************************************************/
 
 :root {
-  --even-spacing: 3.5rem;
+  --even-spacing: 3rem;
 
   /* --color-secondary:  hsl(210, 10%, 23.0%);
   --color-tertiary:   hsl(210, 10%, 19.0%);
@@ -59,8 +59,14 @@ main {
 }
       
 section {
+  /* min-height: 100svh; */
+  padding: calc(var(--even-spacing) * 2) 0;
+}
+
+#hero {
   min-height: 100svh;
-  padding-top: var(--even-spacing);
+  padding-left:  2rem;
+  padding-right: 2rem;
 }
 
 a {
@@ -84,6 +90,10 @@ a {
   font-weight: bold;
 }
 
+.section-header {
+  text-align: center;
+}
+
 .section-card {
   background-color: var(--color-cards);
   border-color: var(--color-cards);
@@ -100,35 +110,32 @@ a {
 **************************************************/
 
 nav,
-.offcanvas {
+.offcanvas
+{
   background-color: var(--color-nav);
 }
 
-#hero > :first-child,
-.section-header,
+.section-card,
 .subheading,
-.section-container,
-.section-card:not(:first-child) {
+#more-projects-btn {
   margin-top: var(--even-spacing);
 }
 
-#hero > :last-child,
-#more-projects-btn,
-.section-card:last-child {
-  margin-bottom: var(--even-spacing);
-}
-
-section:not(
-  #hero,
-  #experience,
-  #contacts
-) {
-  border-bottom: 2px solid gray;
-}
-
 .section-card,
-.img-border-radius {
+.img-border-radius
+{
   border-radius: 0.5rem;
+}
+
+#hero,
+#projects
+{
+  background-color: var(--color-hero);
+  box-shadow:
+    25vw 0 var(--color-hero),
+    50vw 0 var(--color-hero),
+    -25vw 0 var(--color-hero),
+    -50vw 0 var(--color-hero);
 }
 
 /**************************************************
@@ -149,17 +156,12 @@ section:not(
 * RESPONSIVE
 **************************************************/
 
-#hero {
-  padding-left:  2rem;
-  padding-right: 2rem;
-  
-  box-shadow: 25vw 0 var(--color-hero), -25vw 0 var(--color-hero);
-}
-
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   #hero {
     position: sticky;
     top: 0;
+
+    margin-right: ;
 
     box-shadow: -25vw -25vw 0 25vw var(--color-hero);
   }
@@ -170,7 +172,7 @@ section:not(
   ) {
     margin-left: 3rem;
   }
-}
+} */
 
 /**************************************************
 * TEMPORARY OUTLINES
