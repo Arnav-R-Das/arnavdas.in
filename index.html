@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arnav Das</title>
 
+    <style>
+      header, main, footer {display: none}
+    </style>
+
     <!-- LINKS -->
 
       <!-- FAVICON -->
@@ -19,6 +23,21 @@
 
   </head>
   <body data-bs-theme="dark">
+
+    <div id="spinner" style="
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      height: 100svh;
+    ">
+      <img loading="lazy" id="hero-pic" src="images/spinner/spinner-1-blue.gif" style="
+        margin: 1.5rem;
+        width: 3rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+      ">
+    </div>
 
     <header>
       <!-- NAVBAR -->
@@ -425,7 +444,17 @@
         })
       })
 
-      
+      /******************************************************************************
+      * Show spinner until content is ready
+      ******************************************************************************/
+
+      window.addEventListener("load", () => {
+        document.getElementById("spinner").style.display = "none"
+        document.querySelector("header").style.display = "block"
+        document.querySelector("main").style.display = "block"
+        document.querySelector("footer").style.display = "block"
+      });
+
     </script>
   </body>
 </html>
