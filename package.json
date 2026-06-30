@@ -1,0 +1,30 @@
+{
+  "name": "Portfolio — Arnav Das",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node build.js",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnavrdas/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arnavrdas/portfolio/issues"
+  },
+  "homepage": "https://github.com/arnavrdas/portfolio#readme",
+  "dependencies": {
+    "handlebars": "^4.7.9"
+  },
+  "devDependencies": {
+    "chokidar": "^5.0.0",
+    "vite": "^8.1.0"
+  }
+}

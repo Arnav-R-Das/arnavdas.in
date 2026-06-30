@@ -1,0 +1,278 @@
+{{!-- src/index.hbs --}}
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arnav Das</title>
+
+    <!-- LINKS -->
+
+      <!-- FAVICON -->
+      <link rel="icon" type="image/x-icon" href="./static/assets/images/my-pics/Arnav_Das.png">
+
+      <!-- BOOTSTRAP -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+      <!-- CUSTOM CSS -->
+      <link rel="stylesheet" href="./static/style.css">
+
+  </head>
+  <body data-bs-theme="dark">
+
+    <header>
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container-xxl">
+          <a class="navbar-brand highlight" href="#">
+            <!-- <img loading="lazy" src="./static/assets/images/my-pics/Arnav_Das.png" width="24" height="24" class="d-inline-block align-text-top" style="margin-right: 6px;"> -->
+            Arnav Das
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Jump to</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link highlight btn nav-btn" role="button" href="#skills">    Skills    </a></li>
+                <li class="nav-item"><a class="nav-link highlight btn nav-btn" role="button" href="#projects">  Projects  </a></li>
+                <li class="nav-item"><a class="nav-link highlight btn nav-btn" role="button" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link highlight btn nav-btn" role="button" href="#contacts">  Contact   </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <!-- HERO -->
+      <section id="hero" style="
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+      ">
+
+        <img loading="lazy" id="hero-pic" src="./static/assets/images/my-pics/Arnav_Das.jpg" style="
+          width: 250px;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+        ">
+
+        <br>
+        <h1 id="hero-name">Arnav Das</h1>
+        <h4 id="hero-role">Full-Stack Developer</h4>
+        
+        <br>
+        <span style="
+          max-width: 30rem;
+          text-align: center;
+          font-style: italic;
+        ">
+          I turns your ideas into user-focused web solutions
+          <br>using Typescript (React, Express) and Python (FastAPI).
+        </span>
+
+        <!-- <br>
+        <div>
+          <img loading="lazy" class="icon" src="./static/assets/images/icons/location.svg">
+          Vadodara, Gujarat, India
+        </div> -->
+
+        <br>
+        <div>
+          <a class="btn btn-success" target="_blank" href="./static/assets/resume/CV_Arnav_Das.pdf">
+            <!-- <img loading="lazy" class="icon" src="./static/assets/images/icons/download.svg"> -->
+            <span class="highlight">Resume</span>
+          </a>
+          <div id="links-container" style="display: inline-block;">
+            {{#each contacts}}
+            
+              <a class="btn main-btn" target="_blank" href="{{link}}" style="margin-right: 4px;">
+                <img loading="lazy" class="icon" src="./static/assets/images/icons/{{icon}}.svg">
+              </a>
+
+            {{/each}}
+          </div>
+        </div>
+
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h3 class="section-header">Skills</h3>
+        <div id="skills-container">
+          {{#each skills}}
+
+            <div>
+              <h5 class="subheading">{{skill}}</h5>
+              {{#each items}}
+                <span class="skill-span" style="
+                    /* background-color: var(--color-cards); */
+                    /* padding: 0.325rem; */
+                    line-height: 2.325rem;
+                    margin-right: 0.375rem;
+                    /* border-radius: 0.5rem; */
+                ">
+                  {{this}}{{#unless @last}},{{/unless}}
+                </span>
+              {{/each}}
+            </div>
+
+          {{/each}}
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h3 class="section-header">Projects</h3>
+        <div class="container-fluid">
+          <div id="projects-container" class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4">
+            {{#each projects}}
+
+              <div class="col">
+                <div class="section-card card" style="padding: 0.5rem;">
+                  <div class="card-body">
+
+                    <div class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        {{#each screenshots}}
+                          <div class="carousel-item {{#if @first}}active{{/if}}" data-bs-interval="3000" style="
+                            margin-bottom: 1.5rem;
+                          ">
+                            <img loading="lazy" src="./static/assets/images/project-screenshots/{{../screenshots_directory}}/{{this}}.png" class="d-block w-100" style="
+                              max-height: 15rem;
+                              object-fit: contain;
+                            ">
+                          </div>
+                        {{/each}}
+                      </div>
+                    </div>
+
+                    <h5 class="card-title">{{project_name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{tech_stack}}</h6>
+                    <p class="card-text">{{description}}</p>
+
+                    <a class="btn main-btn" target="_blank" href="https://{{live_link}}.arnavdas.in">           <span class="highlight"> Live Demo </span></a>
+                    <a class="btn main-btn" target="_blank" href="https://github.com/arnavrdas/{{github_link}}"><span class="highlight"> GitHub    </span></a>
+
+                  </div>
+                </div>
+              </div>
+              
+            {{/each}}
+          </div>
+        </div>
+
+        {{!-- <a id="more-projects-btn" class="btn main-btn" target="_blank" href="/more-projects">
+          <span class="highlight">More Projects</span>
+        </a> --}}
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <h3 class="section-header">Experience</h3>
+        <div id="experience-container">
+         {{#each experiences}}
+
+            <div class="section-card card" style="
+              padding:1.5rem;
+            ">
+              <div class="row g-0">
+                <div class="col-4 col-md-3 col-lg-2 col-xl-2">
+                  <img loading="lazy" src="./static/assets/images/company-logos/{{img_src}}" class="img-fluid img-border-radius" alt="Logo of {{company_name}}" onclick="window.open('https://{{company_website}}', '_blank')" style="
+                    height: 145px;
+                    aspect-ratio: 1/1;
+                  ">
+                </div>
+                <div class="col">
+                  <div class="card-body">
+                    <h5 class="card-title">{{role}}</h5>
+                    <p class="card-text">
+                      <a target="_blank" href="https://{{company_website}}">
+                        <span class="highlight">{{company_name}}</span>
+                        <img loading="lazy" src="./static/assets/images/icons/link-2.svg" height="18" class="d-inline-block align-text-top">
+                      </a>
+                      <br>{{location}}
+                    </p>
+                    <p class="card-text">
+                      <small class="text-body-secondary">{{duration}}</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col-0 col-md-3 col-lg-2 col-xl-2"></div>
+                <div class="col">
+                  <br>
+                  <ul>
+                    {{#each responsibilities}}
+                      <li>{{this}}</li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          {{/each}}
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="container-xxl" style="
+      background-color: var(--color-footer);
+      box-shadow: 25vw 25vw 0 25vw var(--color-footer), -25vw 25vw 0 25vw var(--color-footer)
+    ">
+      <section id="contacts">
+        <!-- <h3 class="section-header">Get in touch</h3> -->
+        <div id="contacts-container" style="
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-evenly;
+        ">
+          {{#each contacts}}
+
+            <div>
+              <a target="_blank" href="{{link}}">
+                <img loading="lazy" class="icon" src="./static/assets/images/icons/{{icon}}.svg">
+                {{show}}
+              </a>
+            </div>
+
+          {{/each}}
+        </div>
+      </section>
+    </footer>
+
+    <!-- BOOTSTRAP -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+
+      /******************************************************************************
+      * Automatically close navbar aftering selecting a section (in mobile view)
+      ******************************************************************************/
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            const offcanvasEl = document.getElementById('offcanvasNavbar')
+            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl)
+            if (offcanvas) {
+              offcanvas.hide()
+            }
+          })
+        })
+      })
+
+    </script>
+  </body>
+</html>
