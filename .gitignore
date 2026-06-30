@@ -1,4 +1,4 @@
-package-lock.json
+# package-lock.json (for GitHub Actions)
 node_modules
 
 dist
