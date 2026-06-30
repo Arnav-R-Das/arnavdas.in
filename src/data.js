@@ -27,7 +27,7 @@ const projects = [
   {
     project_name: "Ember — Dating site ",
     tech_stack:   "Typescript, React, Node.js, Express, Prisma MongoDB, Mongoose",
-    description:  "Description...",
+    description:  "",
     live_link:    "ember",
     github_link:  "Ember",
     screenshots_directory: "ember",
@@ -36,7 +36,7 @@ const projects = [
   {
     project_name: "SmartHire — AI Interviewer",
     tech_stack:   "React, Python, FastAPI, SQLAlchemy, PostgreSQL",
-    description:  "Description...",
+    description:  "",
     live_link:    "smarthire",
     github_link:  "SmartHire",
     screenshots_directory: "smarthire",
