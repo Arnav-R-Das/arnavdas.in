@@ -3,7 +3,7 @@
 const skills = [
   {
     skill: "Languages",
-    items: ["Javascript", "Typescript", "Python"],
+    items: ["JavaScript", "TypeScript", "Python"],
   },
   {
     skill: "Backend",
@@ -11,11 +11,11 @@ const skills = [
   },
   {
     skill: "DevOps",
-    items: ["Git", "GitHub", "GitHub Actions", "Docker", "Nginx", "Caddy"],
+    items: ["GIT", "GitHub", "GitHub Actions", "Docker", "Nginx", "Caddy"],
   },
   {
     skill: "Databases",
-    items: ["MongoDB", "MySQL", "MariaDB", "SQLite"],
+    items: ["PostgreSQL", "MongoDB", "MySQL", "MariaDB", "SQLite"],
   },
   {
     skill: "Frontend",
@@ -104,7 +104,7 @@ const contacts = [
   },
   {
     show: "linkedin.com/in/arnavrdas",
-    link: "https://www.linkedin.com/in/arnavrdas/",
+    link: "https://linkedin.com/in/arnavrdas/",
     icon: "linkedin",
   },
   {

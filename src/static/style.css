@@ -30,156 +30,165 @@
 **************************************************/
 
 :root {
-    --even-spacing: 3rem;
+  --even-spacing: 3rem;
+
+  /* --color-secondary:  hsl(210, 10%, 23.0%);
+  --color-tertiary:   hsl(210, 10%, 19.0%);
+  --color-dark:       hsl(210, 10%, 14.5%); */
+
+  --color: 3%;
+
+  --color-nav:       hsl(213.5, 50%, calc(var(--color)* 1));
+  --color-nav-hover: hsl(213.5, 50%, calc(var(--color)* 3));
+
+  --color-hero:      hsl(213.5, 50%, calc(var(--color)* 3));
   
-    /* --color-secondary:  hsl(210, 10%, 23.0%);
-    --color-tertiary:   hsl(210, 10%, 19.0%);
-    --color-dark:       hsl(210, 10%, 14.5%); */
+  --color-main:      hsl(213.5, 50%, calc(var(--color)* 4));
+  --color-cards:     hsl(213.5, 50%, calc(var(--color)* 5));
+
+  --color-btn:       hsl(213.5, 75%, 30%);
+  --color-btn-hover: hsl(213.5, 75%, 20%);
   
-    --color: 3%;
-  
-    --color-nav:       hsl(213.5, 50%, calc(var(--color)* 1));
-    --color-nav-hover: hsl(213.5, 50%, calc(var(--color)* 3));
-  
-    --color-hero:      hsl(213.5, 50%, calc(var(--color)* 3));
-    
-    --color-main:      hsl(213.5, 50%, calc(var(--color)* 4));
-    --color-cards:     hsl(213.5, 50%, calc(var(--color)* 5));
-  
-    --color-btn:       hsl(213.5, 75%, 30%);
-    --color-btn-hover: hsl(213.5, 75%, 20%);
-    
-    --color-footer:    hsl(213.5, 50%, calc(var(--color)* 2));
+  --color-footer:    hsl(213.5, 50%, calc(var(--color)* 2));
+}
+
+body {
+  background-color: var(--color-main);
+}
+
+main {
+  background-color: var(--color-main);
+}
+      
+section {
+  /* min-height: 100svh; */
+  padding: calc(var(--even-spacing) * 2) 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**************************************************
+* ID
+**************************************************/
+
+#my-hero {
+  min-height: 100svh;
+  padding-left:  2rem;
+  padding-right: 2rem;
+}
+
+/**************************************************
+* CLASS
+**************************************************/
+
+.my-nav-btn {
+  background-color: var(--color-nav);
+  border-color:     var(--color-nav);
+}
+
+.my-icon-parent {
+  display: inline-flex;
+  align-items:center;
+}
+
+.my-color-invert {
+  filter: brightness(0) invert(1);
+}
+
+.my-highlight {
+  font-weight: bold;
+}
+
+.my-section-header {
+  text-align: center;
+}
+
+.my-section-card {
+  background-color: var(--color-cards);
+  border-color: var(--color-cards);
+  contain: layout paint;
+}
+
+.my-btn {
+  background-color: var(--color-btn);
+  border-color:     var(--color-btn);
+}
+
+/**************************************************
+* SHARED
+**************************************************/
+
+nav,
+.offcanvas
+{
+  background-color: var(--color-nav);
+}
+
+.my-section-card,
+.my-subheading,
+#my-more-projects-btn {
+  margin-top: var(--even-spacing);
+}
+
+.my-section-card,
+.my-img-border-radius
+{
+  border-radius: 0.5rem;
+}
+
+#my-hero,
+#my-projects
+{
+  background-color: var(--color-hero);
+  box-shadow:
+    25vw 0 var(--color-hero),
+    50vw 0 var(--color-hero),
+    -25vw 0 var(--color-hero),
+    -50vw 0 var(--color-hero);
+}
+
+/**************************************************
+* EVENTS
+**************************************************/
+
+.my-nav-btn:hover {
+  background-color: var(--color-nav-hover);
+  border-color:     var(--color-nav-hover);
+}
+
+.my-main-btn:hover {
+  background-color: var(--color-btn-hover);
+  border-color:     var(--color-btn-hover);
+}
+
+/**************************************************
+* MEDIA QUERIES
+**************************************************/
+
+/* @media (min-width: 1200px) {
+  #my-hero {
+    position: sticky;
+    top: 0;
+
+    margin-right: ;
+
+    box-shadow: -25vw -25vw 0 25vw var(--color-hero);
   }
-  
-  body {
-    background-color: var(--color-main);
+
+  section:not(
+    #my-hero,
+    #my-contacts
+  ) {
+    margin-left: 3rem;
   }
-  
-  main {
-    background-color: var(--color-main);
-  }
-        
-  section {
-    /* min-height: 100svh; */
-    padding: calc(var(--even-spacing) * 2) 0;
-  }
-  
-  #hero {
-    min-height: 100svh;
-    padding-left:  2rem;
-    padding-right: 2rem;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  /**************************************************
-  * CLASSES
-  **************************************************/
-  
-  .nav-btn {
-    background-color: var(--color-nav);
-    border-color:     var(--color-nav);
-  }
-  
-  .icon {
-    height: 1.6rem;
-  }
-  
-  .highlight {
-    font-weight: bold;
-  }
-  
-  .section-header {
-    text-align: center;
-  }
-  
-  .section-card {
-    background-color: var(--color-cards);
-    border-color: var(--color-cards);
-    contain: layout paint;
-  }
-  
-  .main-btn {
-    background-color: var(--color-btn);
-    border-color:     var(--color-btn);
-  }
-  
-  /**************************************************
-  * SHARED
-  **************************************************/
-  
-  nav,
-  .offcanvas
-  {
-    background-color: var(--color-nav);
-  }
-  
-  .section-card,
-  .subheading,
-  #more-projects-btn {
-    margin-top: var(--even-spacing);
-  }
-  
-  .section-card,
-  .img-border-radius
-  {
-    border-radius: 0.5rem;
-  }
-  
-  #hero,
-  #projects
-  {
-    background-color: var(--color-hero);
-    box-shadow:
-      25vw 0 var(--color-hero),
-      50vw 0 var(--color-hero),
-      -25vw 0 var(--color-hero),
-      -50vw 0 var(--color-hero);
-  }
-  
-  /**************************************************
-  * EVENTS
-  **************************************************/
-  
-  .nav-btn:hover {
-    background-color: var(--color-nav-hover);
-    border-color:     var(--color-nav-hover);
-  }
-  
-  .main-btn:hover {
-    background-color: var(--color-btn-hover);
-    border-color:     var(--color-btn-hover);
-  }
-  
-  /**************************************************
-  * RESPONSIVE
-  **************************************************/
-  
-  /* @media (min-width: 1200px) {
-    #hero {
-      position: sticky;
-      top: 0;
-  
-      margin-right: ;
-  
-      box-shadow: -25vw -25vw 0 25vw var(--color-hero);
-    }
-  
-    section:not(
-      #hero,
-      #contacts
-    ) {
-      margin-left: 3rem;
-    }
-  } */
-  
-  /**************************************************
-  * TEMPORARY OUTLINES
-  **************************************************/
-  
-  /* main          {outline: 1px solid hsl(  0, 100%,  50%)} */
-  /* section       {outline: 1px solid hsl(  0,   0%, 100%)} */
-  /* .section-card {outline: 1px solid hsl(  0, 100%,  50%)} */
+} */
+
+/**************************************************
+* TEMPORARY OUTLINES
+**************************************************/
+
+/* main          {outline: 1px solid hsl(  0, 100%,  50%)} */
+/* section       {outline: 1px solid hsl(  0,   0%, 100%)} */
+/* .my-section-card {outline: 1px solid hsl(  0, 100%,  50%)} */
