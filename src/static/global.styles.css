@@ -1,0 +1,170 @@
+/* src/static/global.styles.css */
+
+/**************************************************
+* ELEMENTS
+**************************************************/
+
+:root {
+  --my-even-spacing: 3rem;
+
+  --my-color: 3%;
+
+  --my-color-nav:       hsl(213.5, 50%, calc(var(--my-color)* 1));
+  --my-color-nav-hover: hsl(213.5, 50%, calc(var(--my-color)* 3));
+
+  --my-color-hero:      hsl(213.5, 50%, calc(var(--my-color)* 3));
+  
+  --my-color-main:      hsl(213.5, 50%, calc(var(--my-color)* 4));
+  --my-color-cards:     hsl(213.5, 50%, calc(var(--my-color)* 5));
+  --my-color-border:    hsl(213.5, 50%, calc(var(--my-color)* 7));
+
+  --my-color-btn:       hsl(213.5, 75%, 30%);
+  --my-color-btn-hover: hsl(213.5, 75%, 20%);
+  
+  --my-color-footer:    hsl(213.5, 50%, calc(var(--my-color)* 2));
+}
+      
+section {
+  padding: calc(var(--my-even-spacing) * 2) var(--my-even-spacing);
+}
+
+a {
+  text-decoration: none;
+}
+
+/**************************************************
+* MY CLASSES
+**************************************************/
+
+.my-nav-btn {
+  background-color: var(--my-color-nav);
+  border-color:     var(--my-color-nav);
+}
+
+.my-icon-parent {
+  display: inline-flex;
+  align-items:center;
+}
+
+.my-highlight {
+  font-weight: bold;
+}
+
+.my-section-header {
+  text-align: center;
+}
+
+.my-section-card {
+  border: 2px solid var(--my-color-border);
+  contain: layout paint;
+}
+
+.my-btn {
+  background-color: var(--my-color-btn);
+  border-color:     var(--my-color-btn);
+}
+
+/**************************************************
+* OTHER CLASSES
+**************************************************/
+
+.card {padding: 0}
+
+/**************************************************
+* SHARED
+**************************************************/
+
+nav,
+.offcanvas {
+  background-color: var(--my-color-nav);
+}
+
+.card-header,
+.card-body,
+.card-footer {
+  padding: 1rem;
+}
+
+.my-section-card,
+.card-header,
+.card-footer {
+  background-color: var(--my-color-cards);
+}
+
+.my-section-card,
+#my-more-projects-btn {
+  margin-top: var(--my-even-spacing);
+}
+
+.my-section-card,
+.my-img-border-radius {
+  border-radius: 0.5rem;
+}
+
+#hero,
+#projects {
+  background-color: var(--my-color-hero);
+  box-shadow:
+    25vw 0 var(--my-color-hero),
+    50vw 0 var(--my-color-hero),
+    -25vw 0 var(--my-color-hero),
+    -50vw 0 var(--my-color-hero);
+}
+
+/**************************************************
+* EVENTS
+**************************************************/
+
+.my-nav-btn:hover {
+  background-color: var(--my-color-nav-hover);
+  border-color:     var(--my-color-nav-hover);
+}
+
+.my-main-btn:hover {
+  background-color: var(--my-color-btn-hover);
+  border-color:     var(--my-color-btn-hover);
+}
+
+/**************************************************
+* MEDIA QUERIES
+**************************************************/
+
+/* Extra small */
+@media (max-width: 576px) {}
+
+/* Small */
+@media (min-width: 576px) {
+  .my-skill-card                {width: calc(50% - (var(--my-even-spacing) / 2))}
+  .my-skill-card:nth-child(odd) {margin-right: var(--my-even-spacing)}
+}
+
+/* Medium */
+@media (min-width: 768px) {}
+
+/* Large */
+@media (min-width: 992px) {
+  .my-skill-card                   {width: calc(33.3% - ((2 * var(--my-even-spacing)) / 3))}
+  .my-skill-card:nth-child(odd)    {margin-right: 0}
+  .my-skill-card:nth-child(3n),
+  .my-skill-card:nth-child(3n - 1) {margin-left: var(--my-even-spacing)}
+
+  /* When there are 2n projects */
+  .my-project-card                {width: calc(50% - (var(--my-even-spacing) / 2))}
+  .my-project-card:nth-child(odd) {margin-right: var(--my-even-spacing)}
+}
+
+/* Extra large */
+@media (min-width: 1200px) {}
+
+/* Extra extra large */
+@media (min-width: 1400px) {
+  section {
+    padding-left: 0;
+    padding-right: 0
+  }
+
+  /* When there are 3n projects */
+  /* .my-project-card                   {width: calc(33.3% - ((2 * var(--my-even-spacing)) / 3))}
+  .my-project-card:nth-child(odd)    {margin-right: 0}
+  .my-project-card:nth-child(3n - 1) {margin-left: var(--my-even-spacing); margin-right: var(--my-even-spacing);} */
+}

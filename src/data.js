@@ -3,30 +3,30 @@
 const skills = [
   {
     skill: "Languages",
-    items: ["JavaScript", "TypeScript", "Python"],
+    items: ["TypeScript", "JavaScript", "Python"],
+  },
+  {
+    skill: "Frontend",
+    items: ["React"],
   },
   {
     skill: "Backend",
     items: ["Node.js", "Express", "Fastify", "FastAPI"],
   },
   {
-    skill: "DevOps",
-    items: ["GIT", "GitHub", "GitHub Actions", "Docker", "Nginx", "Caddy"],
-  },
-  {
     skill: "Databases",
-    items: ["PostgreSQL", "MongoDB", "MySQL", "MariaDB", "SQLite"],
+    items: ["PostgreSQL", "MongoDB", "SQLite", "Prisma"],
   },
   {
-    skill: "Frontend",
-    items: ["HTMX", "Bootstrap"],
+    skill: "DevOps & Tools",
+    items: ["Docker", "GitHub Actions", "Nginx", "GIT", "GitHub"],
   },
 ]
 
 const projects = [
   {
     project_name: "Ember — Dating site ",
-    tech_stack:   "Typescript, React, Node.js, Express, Prisma MongoDB, Mongoose",
+    tech_stack:   "Typescript, React, Node.js, Express, Prisma, MongoDB",
     description:  "",
     live_link:    "ember",
     github_link:  "Ember",
@@ -98,17 +98,17 @@ const experiences = [
 
 const contacts = [
   {
-    show: "arnavrdas@gmail.com",
+    name: "arnavrdas@gmail.com",
     link: "mailto:arnavrdas@gmail.com",
     icon: "email",
   },
   {
-    show: "linkedin.com/in/arnavrdas",
+    name: "linkedin.com/in/arnavrdas",
     link: "https://linkedin.com/in/arnavrdas/",
     icon: "linkedin",
   },
   {
-    show: "github.com/arnavrdas",
+    name: "github.com/arnavrdas",
     link: "https://github.com/arnavrdas/",
     icon: "github",
   },

@@ -11,14 +11,14 @@
         <link rel="icon" href="./static/images/icons/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" type='text/css' />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="./static/style.css">
+        <link rel="stylesheet" href="./static/global.styles.css">
 
     </head>
-    <body data-bs-theme="dark">
+    <body data-bs-theme="dark" style="background-color: var(--my-color-main)">
 
         {{!-- NAVBAR --}}
             <header>
-                <nav class="navbar navbar-expand-sm fixed-top">
+                <nav class="navbar navbar-expand-md fixed-top">
                     <div class="container-xxl">
                         <a class="navbar-brand my-highlight" href="#">
                             <!-- <img loading="lazy" src="./static/images/my-pics/Arnav_Das.png" width="24" height="24" class="d-inline-block align-text-top" style="margin-right: 6px;"> -->
@@ -34,10 +34,10 @@
                             </div>
                             <div class="offcanvas-body">
                                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li class="nav-item"><a class="nav-link my-highlight btn my-nav-btn" role="button" href="#my-skills">    Skills    </a></li>
-                                    <li class="nav-item"><a class="nav-link my-highlight btn my-nav-btn" role="button" href="#my-projects">  Projects  </a></li>
-                                    <li class="nav-item"><a class="nav-link my-highlight btn my-nav-btn" role="button" href="#my-experience">Experience</a></li>
-                                    <li class="nav-item"><a class="nav-link my-highlight btn my-nav-btn" role="button" href="#my-contacts">  Contact   </a></li>
+                                    <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#skills">    Skills    </a></li>
+                                    <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#projects">  Projects  </a></li>
+                                    <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#experience">Experience</a></li>
+                                    <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#contact">  Contact   </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -46,10 +46,10 @@
             </header>
 
         {{!-- MAIN CONTAINER --}}
-            <main class="container-xxl">
+            <main class="container-xxl" style="background-color: var(--my-color-main)">
 
                 {{!-- HERO --}}
-                    <section id="my-hero" style=" display: flex; flex-flow: column nowrap; justify-content: center; align-items: center;">
+                    <section id="hero" style="display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; min-height: 100svh; padding-left: 2rem; padding-right: 2rem;">
 
                         {{!-- My Picture --}}
                         <img loading="lazy" src="./static/images/my-pics/Arnav_Das.jpg" style="width: 250px; aspect-ratio: 1/1; border-radius: 50%;">
@@ -77,7 +77,7 @@
                         <br>
                         <div>
                             <a class="btn btn-success" target="_blank" href="./static/resume/CV_Arnav_Das.pdf">
-                                <!-- <img loading="lazy" class="my-icon" src="./static/images/icons/general/download.svg"> -->
+                                {{!-- <img loading="lazy" class="my-icon" src="./static/images/icons/general/download.svg"> --}}
                                 <span class="my-highlight">Resume</span>
                             </a>
                             <div style="display: inline-block;">
@@ -92,60 +92,64 @@
                     </section>
 
                 {{!-- SKILLS --}}
-                    <section id="my-skills">
+                    <section id="skills">
                         <h3 class="my-section-header">Skills</h3>
-                        <div>
+                        <div class="row justify-content-center">
                             {{#each skills}}
-                                <div>
-                                    <h5 class="my-subheading">{{skill}}</h5>
+                                <div class="card my-section-card my-skill-card">
+                                    <div class="card-header" style="text-align: center;">
+                                        <h5>{{skill}}</h5>
+                                    </div>
+                                    <div class="card-body">
                                         {{#each items}}
                                             <div class="my-icon-parent">
-                                                <img class="my-color-invert" src="./static/images/icons/skills/{{this}}.svg" alt="" style="height:1rem; margin-right:0.5rem">
+                                                <img src="./static/images/icons/skills/{{this}}.svg" alt="" style="height:1rem; margin-right:0.5rem; filter: brightness(0) invert(1);">
                                                 <span style="line-height: 2.325rem; margin-right: 1.5rem;">
                                                     {{this}}
                                                 </span>
                                             </div>
-                                    {{/each}}
+                                        {{/each}}
+                                    </div>
                                 </div>
                             {{/each}}
                         </div>
                     </section>
 
                 {{!-- PROJECTS --}}
-                    <section id="my-projects">
+                    <section id="projects">
                         <h3 class="my-section-header">Projects</h3>
-                        <div class="container-fluid">
-                            <div class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-4">
-                                {{#each projects}}
-                                    <div class="col">
-                                        <div class="my-section-card card" style="padding: 0.5rem;">
-                                            <div class="card-body">
+                        <div class="row">
+                            {{#each projects}}
+                                <div class="card my-section-card my-project-card">
 
-                                                {{!-- Screenshots --}}
-                                                <div class="carousel slide" data-bs-ride="carousel">
-                                                    <div class="carousel-inner">
-                                                        {{#each screenshots}}
-                                                            <div class="carousel-item {{#if @first}}active{{/if}}" data-bs-interval="3000" style="margin-bottom: 1.5rem;">
-                                                                <img loading="lazy" src="./static/images/project-screenshots/{{../screenshots_directory}}/{{this}}.png" class="d-block w-100" style="max-height: 15rem; object-fit: contain;">
-                                                            </div>
-                                                        {{/each}}
+                                    {{!-- Screenshots --}}
+                                    <div class="card-header">
+                                        <div class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                {{#each screenshots}}
+                                                    <div class="carousel-item {{#if @first}}active{{/if}}" data-bs-interval="3000">
+                                                        <img loading="lazy" src="./static/images/project-screenshots/{{../screenshots_directory}}/{{this}}.png" class="d-block w-100" style="max-height: 15rem; object-fit: contain;">
                                                     </div>
-                                                </div>
-
-                                                {{!-- Project Name, Tech Stack & Description --}}
-                                                <h5 class="card-title">{{project_name}}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary">{{tech_stack}}</h6>
-                                                <p class="card-text">{{description}}</p>
-
-                                                {{!-- Buttons --}}
-                                                <a class="btn my-btn" target="_blank" href="https://{{live_link}}.arnavdas.in">           <span class="my-highlight"> Live Demo </span></a>
-                                                <a class="btn my-btn" target="_blank" href="https://github.com/arnavrdas/{{github_link}}"><span class="my-highlight"> GitHub    </span></a>
-
+                                                {{/each}}
                                             </div>
                                         </div>
                                     </div>
-                                {{/each}}
-                            </div>
+
+                                    {{!-- Project Name, Tech Stack & Description --}}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{project_name}}</h5>
+                                        <h6 class="card-subtitle mb-2 text-body-secondary">{{tech_stack}}</h6>
+                                        <p class="card-text">{{description}}</p>
+                                    </div>
+
+                                    {{!-- Buttons --}}
+                                    <div class="card-footer">
+                                        <a class="btn my-btn" target="_blank" href="https://{{live_link}}.arnavdas.in">           <span class="my-highlight"> Live Demo </span></a>
+                                        <a class="btn my-btn" target="_blank" href="https://github.com/arnavrdas/{{github_link}}"><span class="my-highlight"> GitHub    </span></a>
+                                    </div>
+
+                                </div>
+                            {{/each}}
                         </div>
 
                         {{!-- <a id="my-more-projects-btn" class="btn my-btn" target="_blank" href="/more-projects">
@@ -154,49 +158,53 @@
                     </section>
 
                 {{!-- EXPERIENCE --}}
-                    <section id="my-experience">
+                    <section id="experience">
                         <h3 class="my-section-header">Experience</h3>
-                        <div>
+                        <div class="row">
                             {{#each experiences}}
-                                <div class="my-section-card card" style="padding:1.5rem;">
+                                <div class="card my-section-card">
 
                                     {{!-- Company Details --}}
-                                    <div class="row g-0">
+                                    <div class="card-header">
+                                        <div class="row g-0">
 
-                                        {{!-- Logo --}}
-                                        <div class="col-4 col-md-3 col-lg-2 col-xl-2">
-                                            <img loading="lazy" src="./static/images/company-logos/{{img_src}}" class="img-fluid my-img-border-radius" alt="Logo of {{company_name}}" onclick="window.open('https://{{company_website}}', '_blank')" style="height: 145px; aspect-ratio: 1/1;">
-                                        </div>
-
-                                        {{!-- Role, Name, Website, Location, Duration --}}
-                                        <div class="col">
-                                            <div class="card-body">
-                                                <h5 class="card-title">{{role}}</h5>
-                                                <p class="card-text">
-                                                    <a target="_blank" href="https://{{company_website}}">
-                                                        <span class="my-highlight">{{company_name}}</span>
-                                                        <img loading="lazy" src="./static/images/icons/general/link-2.svg" height="18" class="d-inline-block align-text-top">
-                                                    </a>
-                                                    <br>{{location}}
-                                                </p>
-                                                <p class="card-text">
-                                                    <small class="text-body-secondary">{{duration}}</small>
-                                                </p>
+                                            {{!-- Logo --}}
+                                            <div class="col-4 col-md-3 col-lg-2 col-xl-2">
+                                                <img loading="lazy" src="./static/images/company-logos/{{img_src}}" class="img-fluid my-img-border-radius" alt="Logo of {{company_name}}" onclick="window.open('https://{{company_website}}', '_blank')" style="max-height: 145px; aspect-ratio: 1/1;">
                                             </div>
-                                        </div>
 
+                                            {{!-- Role, Name, Website, Location, Duration --}}
+                                            <div class="col">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{role}}</h5>
+                                                    <p class="card-text">
+                                                        <a target="_blank" href="https://{{company_website}}">
+                                                            <span class="my-highlight">{{company_name}}</span>
+                                                            <img loading="lazy" src="./static/images/icons/general/link-2.svg" height="18" class="d-inline-block align-text-top">
+                                                        </a>
+                                                        <br>{{location}}
+                                                    </p>
+                                                    <p class="card-text">
+                                                        <small class="text-body-secondary">{{duration}}</small>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
 
                                     {{!-- My Responsibilities --}}
-                                    <div class="row g-0">
-                                        <div class="col-0 col-md-3 col-lg-2 col-xl-2"></div>
-                                        <div class="col">
-                                            <br>
-                                            <ul>
-                                                {{#each responsibilities}}
-                                                    <li>{{this}}</li>
-                                                {{/each}}
-                                            </ul>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-0 col-md-3 col-lg-2 col-xl-2"></div>
+                                            <div class="col">
+                                                <br>
+                                                <ul>
+                                                    {{#each responsibilities}}
+                                                        <li>{{this}}</li>
+                                                    {{/each}}
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -208,15 +216,15 @@
             </main>
 
         {{!-- CONTACTS --}}
-            <footer class="container-xxl" style="background-color: var(--color-footer); box-shadow: 25vw 25vw 0 25vw var(--color-footer), -25vw 25vw 0 25vw var(--color-footer)">
-                <section id="my-contacts">
-                    <!-- <h3 class="my-section-header">Get in touch</h3> -->
+            <footer class="container-xxl" style="background-color: var(--my-color-footer); box-shadow: 25vw 25vw 0 25vw var(--my-color-footer), -25vw 25vw 0 25vw var(--my-color-footer)">
+                <section id="contact">
+                    {{!-- <h3 class="my-section-header">Get in touch</h3> --}}
                     <div style="display: flex; flex-flow: row wrap; justify-content: space-evenly;">
                         {{#each contacts}}
                             <div>
                                 <a target="_blank" href="{{link}}" class="my-icon-parent">
                                     <img loading="lazy" src="./static/images/icons/general/{{icon}}.svg" style="height:1.6rem; margin-right:0.5rem">
-                                    {{show}}
+                                    {{name}}
                                 </a>
                             </div>
                         {{/each}}
