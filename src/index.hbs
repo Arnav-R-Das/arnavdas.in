@@ -14,244 +14,283 @@
         <link rel="stylesheet" href="./static/global.styles.css">
 
     </head>
-    <body data-bs-theme="dark" style="background-color: var(--my-color-main)">
+    <body data-bs-theme="dark" style="background-color:var(--my-color-main)">
 
-        {{!-- NAVBAR --}}
-            <header>
-                <nav class="navbar navbar-expand-md fixed-top">
-                    <div class="container-xxl">
-                        <a class="navbar-brand my-highlight" href="#">
-                            <!-- <img loading="lazy" src="./static/images/my-pics/Arnav_Das.png" width="24" height="24" class="d-inline-block align-text-top" style="margin-right: 6px;"> -->
-                            Arnav Das
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Jump to</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#skills">    Skills    </a></li>
-                                    <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#projects">  Projects  </a></li>
-                                    <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#experience">Experience</a></li>
-                                    <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#contact">  Contact   </a></li>
-                                </ul>
-                            </div>
+        <!-- NAVBAR -->
+        <header>
+            <nav class="navbar navbar-expand-md fixed-top">
+                <div class="container-xxl">
+                    <a class="navbar-brand my-highlight" href="#">
+                        {{!-- <img loading="lazy" src="./static/images/my-pics/Arnav_Das.png" width="24" height="24" class="d-inline-block align-text-top" style="margin-right:6px;"> --}}
+                        Arnav Das
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Jump to</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#skills">    Skills    </a></li>
+                                <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#projects">  Projects  </a></li>
+                                <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#experience">Experience</a></li>
+                                <li class="nav-item"><a class="nav-link btn my-nav-btn my-highlight" role="button" href="#contact">  Contact   </a></li>
+                            </ul>
                         </div>
                     </div>
-                </nav>
-            </header>
+                </div>
+            </nav>
+        </header>
 
-        {{!-- MAIN CONTAINER --}}
-            <main class="container-xxl" style="background-color: var(--my-color-main)">
+        <!-- MAIN CONTAINER -->
+        <main class="container-xxl" style="background-color:var(--my-color-main)">
 
-                {{!-- HERO --}}
-                    <section id="hero" style="display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; min-height: 100svh; padding-left: 2rem; padding-right: 2rem;">
+            <!-- HERO -->
+            <section id="hero" style="display:flex; flex-flow:column nowrap; justify-content:center; align-items:center; min-height:100svh; padding-left:2rem; padding-right:2rem;">
 
-                        {{!-- My Picture --}}
-                        <img loading="lazy" src="./static/images/my-pics/Arnav_Das.jpg" style="width: 250px; aspect-ratio: 1/1; border-radius: 50%;">
+                {{!-- My Picture --}}
+                <img loading="lazy" src="./static/images/my-pics/Arnav_Das.jpg" style="width:250px; aspect-ratio:1/1; border-radius:50%;">
 
-                        {{!-- Name & Title --}}
-                        <br>
-                        <h1>Arnav Das</h1>
-                        <h4>Full-Stack Developer</h4>
-                        
-                        {{!-- Value Proposition --}}
-                        <br>
-                        <span style="max-width: 30rem; text-align: center; font-style: italic;">
-                            I turns your ideas into user-focused web solutions
-                            <br>using Typescript (React, Express) and Python (FastAPI).
-                        </span>
+                {{!-- Name & Title --}}
+                <br>
+                <h1>Arnav Das</h1>
+                <h4>Full-Stack Developer</h4>
+                
+                {{!-- Value Proposition --}}
+                <br>
+                <span style="max-width:27.5rem; text-align:center; font-style:italic;">
+                    Bringing your ideas to life.
+                    <br> Building end-to-end web applications—from database design and REST APIs to intuitive UI and deployment.
+                </span>
 
-                        {{!-- Location --}}
-                        {{!-- <br>
-                        <div>
-                            <img loading="lazy" class="my-icon" src="./static/images/icons/general/location.svg">
-                            Vadodara, Gujarat, India
-                        </div> --}}
-
-                        {{!-- Buttons --}}
-                        <br>
-                        <div>
-                            <a class="btn btn-success" target="_blank" href="./static/resume/CV_Arnav_Das.pdf">
-                                {{!-- <img loading="lazy" class="my-icon" src="./static/images/icons/general/download.svg"> --}}
-                                <span class="my-highlight">Resume</span>
-                            </a>
-                            <div style="display: inline-block;">
-                                {{#each contacts}}            
-                                    <a class="btn my-btn" target="_blank" href="{{link}}">
-                                        <img loading="lazy" src="./static/images/icons/general/{{icon}}.svg" style="height:1.5rem;">
-                                    </a>
-                                {{/each}}
-                            </div>
-                        </div>
-
-                    </section>
-
-                {{!-- SKILLS --}}
-                    <section id="skills">
-                        <h3 class="my-section-header">Skills</h3>
-                        <div class="row justify-content-center">
-                            {{#each skills}}
-                                <div class="card my-section-card my-skill-card">
-                                    <div class="card-header" style="text-align: center;">
-                                        <h5>{{skill}}</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        {{#each items}}
-                                            <div class="my-icon-parent">
-                                                <img src="./static/images/icons/skills/{{this}}.svg" alt="" style="height:1rem; margin-right:0.5rem; filter: brightness(0) invert(1);">
-                                                <span style="line-height: 2.325rem; margin-right: 1.5rem;">
-                                                    {{this}}
-                                                </span>
-                                            </div>
-                                        {{/each}}
-                                    </div>
-                                </div>
-                            {{/each}}
-                        </div>
-                    </section>
-
-                {{!-- PROJECTS --}}
-                    <section id="projects">
-                        <h3 class="my-section-header">Projects</h3>
-                        <div class="row">
-                            {{#each projects}}
-                                <div class="card my-section-card my-project-card">
-
-                                    {{!-- Screenshots --}}
-                                    <div class="card-header">
-                                        <div class="carousel slide" data-bs-ride="carousel">
-                                            <div class="carousel-inner">
-                                                {{#each screenshots}}
-                                                    <div class="carousel-item {{#if @first}}active{{/if}}" data-bs-interval="3000">
-                                                        <img loading="lazy" src="./static/images/project-screenshots/{{../screenshots_directory}}/{{this}}.png" class="d-block w-100" style="max-height: 15rem; object-fit: contain;">
-                                                    </div>
-                                                {{/each}}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {{!-- Project Name, Tech Stack & Description --}}
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{project_name}}</h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary">{{tech_stack}}</h6>
-                                        <p class="card-text">{{description}}</p>
-                                    </div>
-
-                                    {{!-- Buttons --}}
-                                    <div class="card-footer">
-                                        <a class="btn my-btn" target="_blank" href="https://{{live_link}}.arnavdas.in">           <span class="my-highlight"> Live Demo </span></a>
-                                        <a class="btn my-btn" target="_blank" href="https://github.com/arnavrdas/{{github_link}}"><span class="my-highlight"> GitHub    </span></a>
-                                    </div>
-
-                                </div>
-                            {{/each}}
-                        </div>
-
-                        {{!-- <a id="my-more-projects-btn" class="btn my-btn" target="_blank" href="/more-projects">
-                        <span class="my-highlight">More Projects</span>
-                        </a> --}}
-                    </section>
-
-                {{!-- EXPERIENCE --}}
-                    <section id="experience">
-                        <h3 class="my-section-header">Experience</h3>
-                        <div class="row">
-                            {{#each experiences}}
-                                <div class="card my-section-card">
-
-                                    {{!-- Company Details --}}
-                                    <div class="card-header">
-                                        <div class="row g-0">
-
-                                            {{!-- Logo --}}
-                                            <div class="col-4 col-md-3 col-lg-2 col-xl-2">
-                                                <img loading="lazy" src="./static/images/company-logos/{{img_src}}" class="img-fluid my-img-border-radius" alt="Logo of {{company_name}}" onclick="window.open('https://{{company_website}}', '_blank')" style="max-height: 145px; aspect-ratio: 1/1;">
-                                            </div>
-
-                                            {{!-- Role, Name, Website, Location, Duration --}}
-                                            <div class="col">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">{{role}}</h5>
-                                                    <p class="card-text">
-                                                        <a target="_blank" href="https://{{company_website}}">
-                                                            <span class="my-highlight">{{company_name}}</span>
-                                                            <img loading="lazy" src="./static/images/icons/general/link-2.svg" height="18" class="d-inline-block align-text-top">
-                                                        </a>
-                                                        <br>{{location}}
-                                                    </p>
-                                                    <p class="card-text">
-                                                        <small class="text-body-secondary">{{duration}}</small>
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    {{!-- My Responsibilities --}}
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-0 col-md-3 col-lg-2 col-xl-2"></div>
-                                            <div class="col">
-                                                <br>
-                                                <ul>
-                                                    {{#each responsibilities}}
-                                                        <li>{{this}}</li>
-                                                    {{/each}}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            {{/each}}
-                        </div>
-                    </section>
-
-            </main>
-
-        {{!-- CONTACTS --}}
-            <footer class="container-xxl" style="background-color: var(--my-color-footer); box-shadow: 25vw 25vw 0 25vw var(--my-color-footer), -25vw 25vw 0 25vw var(--my-color-footer)">
-                <section id="contact">
-                    {{!-- <h3 class="my-section-header">Get in touch</h3> --}}
-                    <div style="display: flex; flex-flow: row wrap; justify-content: space-evenly;">
-                        {{#each contacts}}
-                            <div>
-                                <a target="_blank" href="{{link}}" class="my-icon-parent">
-                                    <img loading="lazy" src="./static/images/icons/general/{{icon}}.svg" style="height:1.6rem; margin-right:0.5rem">
-                                    {{name}}
-                                </a>
-                            </div>
+                {{!-- Buttons --}}
+                <br>
+                <div>
+                    <a class="btn btn-success" target="_blank" href="./static/resume/CV_Arnav_Das.pdf">
+                        <span class="my-highlight">Resume</span>
+                    </a>
+                    <div style="display:inline-block;">
+                        {{#each contacts}}            
+                        <a class="btn my-btn" target="_blank" href="{{link}}">
+                            <img loading="lazy" src="./static/images/icons/general/{{icon}}.svg" style="height:1.5rem;">
+                        </a>
                         {{/each}}
                     </div>
-                </section>
-            </footer>
+                </div>
 
-        {{!-- SCRIPTS --}}
-            <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-            <script>
+            </section>
 
-                /******************************************************************************
-                    Automatically close navbar aftering selecting a section (in mobile view)
-                ******************************************************************************/
+            <!-- SKILLS -->
+            <section id="skills">
+                <h3 class="my-section-header">Skills</h3>
+                <div class="row justify-content-center">
+                    {{#each skills}}
+                    <div class="card my-card my-skill-card">
+                        <div class="card-header" style="text-align:center;">
+                            <h5>{{skill}}</h5>
+                        </div>
+                        <div class="card-body">
+                            {{#each items}}
+                            <div class="my-icon-parent">
+                                <img src="./static/images/icons/skills/{{this}}.svg" alt="" style="height:1rem; margin-right:0.5rem; filter:brightness(0) invert(1);">
+                                <span class="my-line-height" style="margin-right:1.5rem;">
+                                    {{this}}
+                                </span>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
 
-                    document.addEventListener("DOMContentLoaded", () => {
-                        document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
-                            link.addEventListener('click', () => {
-                                const offcanvasEl = document.getElementById('offcanvasNavbar')
-                                const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl)
-                                if (offcanvas) {
-                                    offcanvas.hide()
-                                }
-                            })
+            <!-- PROJECTS -->
+            <section id="projects">
+                <h3 class="my-section-header">Projects</h3>
+                <div class="row">
+                    {{#each projects}}
+                    <div class="card my-card my-project-card">
+
+                        {{!-- Screenshots --}}
+                        <div class="card-header">
+                            <div class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    {{#each screenshots}}
+                                    <div class="carousel-item {{#if @first}}active{{/if}}" data-bs-interval="3000">
+                                        <img loading="lazy" src="./static/images/project-screenshots/{{../screenshots_directory}}/{{this}}.png" class="d-block w-100" style="max-height:15rem; object-fit:contain;">
+                                    </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+
+                        {{!-- Project Name, Tech Stack & Description --}}
+                        <div class="card-body">
+                            <h5 class="card-title">{{project_name}}</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">{{tech_stack}}</h6>
+                            <p class="card-text">{{description}}</p>
+                        </div>
+
+                        {{!-- Buttons --}}
+                        <div class="card-footer">
+                            <a class="btn my-btn" target="_blank" href="https://{{live_link}}.arnavdas.in">           <span class="my-highlight"> Live Demo </span></a>
+                            <a class="btn my-btn" target="_blank" href="https://github.com/arnavrdas/{{github_link}}"><span class="my-highlight"> GitHub    </span></a>
+                        </div>
+
+                    </div>
+                    {{/each}}
+                </div>
+
+                {{!-- <a id="my-more-projects-btn" class="btn my-btn" target="_blank" href="/more-projects">
+                <span class="my-highlight">More Projects</span>
+                </a> --}}
+            </section>
+
+            <!-- EXPERIENCE -->
+            <section id="experience">
+                <h3 class="my-section-header">Experience</h3>
+                <div class="row rol-col-1 justify-content-center">
+                    {{#each experiences}}
+                    <div class="card my-card">
+
+                        {{!-- Company Details --}}
+                        <div class="card-header">
+                            <div class="row g-0">
+
+                                {{!-- Logo --}}
+                                <div class="col-4 col-md-3 col-lg-2">
+                                    <img loading="lazy" src="./static/images/company-logos/{{img_src}}" class="img-fluid my-img-border-radius" alt="Logo of {{company_name}}" onclick="window.open('https://{{company_website}}', '_blank')" style="max-height:145px; aspect-ratio:1/1;">
+                                </div>
+
+                                {{!-- Role, Name, Website, Location, Duration --}}
+                                <div class="col">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{role}}</h5>
+                                        <p class="card-text">
+                                            <a target="_blank" href="https://{{company_website}}">
+                                                <span class="my-highlight">{{company_name}}</span>
+                                                <img loading="lazy" src="./static/images/icons/general/link-2.svg" height="18" class="d-inline-block align-text-top">
+                                            </a>
+                                            <br>{{location}}
+                                        </p>
+                                        <p class="card-text">
+                                            <small class="text-body-secondary">{{duration}}</small>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {{!-- My Responsibilities --}}
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-0 col-md-3 col-lg-2 col-xl-2"></div>
+                                <div class="col">
+                                    <br>
+                                    <ul>
+                                        {{#each responsibilities}}
+                                        <li>{{this}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+                <h3 class="my-section-header">Get in touch</h3>
+                <div class="row justify-content-center">
+                    <div class="card my-card my-contact-card">
+                        <form id="contact-form" novalidate>
+                            <div class="row">
+                                <div class="col-12 col-md-6 field">
+                                    <label class="my-contact-form-label" for="name">Name</label>
+                                    <small class="my-error-msg my-highlight" style=""></small><br>
+                                    <input class="my-contact-form-input" type="text" id="name" name="name" autocomplete="name" required>
+                                </div>
+                                <div class="col field">
+                                    <label class="my-contact-form-label" for="email">Email</label>
+                                    <small class="my-error-msg my-highlight" style=""></small><br>
+                                    <input class="my-contact-form-input" type="email" id="email" name="email" autocomplete="email" required>
+                                </div>
+                                <div class="field">
+                                    <label class="my-contact-form-label" for="subject">Subject</label>
+                                    <small class="my-error-msg my-highlight" style=""></small><br>
+                                    <input class="my-contact-form-input" type="text" id="subject" name="subject" required>
+                                </div>
+                                <div class="field">
+                                    <label class="my-contact-form-label" for="message">Message</label>
+                                    <small class="my-error-msg my-highlight" style=""></small><br>
+                                    <textarea class="my-contact-form-input" id="message" name="message" rows="4" required></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn my-btn">
+                                <span class="my-highlight"> Send Message </span>
+                            </button>                                
+                            <p id="form-status"></p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- LINKS -->
+        <footer style="display: flex; flex-flow: column nowrap; align-items: center;background-color:var(--my-color-footer); box-shadow:25vw 25vw 0 25vw var(--my-color-footer), -25vw 25vw 0 25vw var(--my-color-footer)">
+            <div id="my-footer-container">
+                <span class="my-contact-link my-icon-parent my-line-height">
+                    <img loading="lazy" src="./static/images/icons/general/location.svg" style="height:1.6rem; margin-right:0.5rem">
+                    Vadodara, Gujarat, India
+                </span>
+                <span class="my-contact-link my-icon-parent my-line-height">
+                    <img loading="lazy" src="./static/images/icons/general/phone.svg" style="height:1.6rem; margin-right:0.5rem">
+                    +91 77606 75849
+                </span>
+                {{#each contacts}}
+                <a class="my-contact-link my-icon-parent my-line-height" target="_blank" href="{{link}}">
+                    <img loading="lazy" src="./static/images/icons/general/{{icon}}.svg" style="height:1.6rem; margin-right:0.5rem">
+                    {{name}}
+                </a>
+                {{/each}}
+            </div>
+        </footer>
+
+        <!-- SCRIPTS -->
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script>
+
+            /******************************************************************************
+                Automatically close navbar aftering selecting a section (in mobile view)
+            ******************************************************************************/
+
+                document.addEventListener("DOMContentLoaded", () => {
+                    document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
+                        link.addEventListener('click', () => {
+                            const offcanvasEl = document.getElementById('offcanvasNavbar')
+                            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl)
+                            if (offcanvas) {
+                                offcanvas.hide()
+                            }
                         })
                     })
+                })
 
-            </script>
+            /******************************************************************************
+                Contact Form
+            ******************************************************************************/
+
+                
+
+        </script>
     </body>
 </html>

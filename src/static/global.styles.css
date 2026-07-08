@@ -17,9 +17,10 @@
   --my-color-main:      hsl(213.5, 50%, calc(var(--my-color)* 4));
   --my-color-cards:     hsl(213.5, 50%, calc(var(--my-color)* 5));
   --my-color-border:    hsl(213.5, 50%, calc(var(--my-color)* 7));
+  --my-color-input:     hsl(213.5, 50%, calc(var(--my-color)* 7));
+  --my-color-focus:     hsl(213.5, 50%, calc(var(--my-color)* 10));
 
   --my-color-btn:       hsl(213.5, 75%, 30%);
-  --my-color-btn-hover: hsl(213.5, 75%, 20%);
   
   --my-color-footer:    hsl(213.5, 50%, calc(var(--my-color)* 2));
 }
@@ -50,11 +51,15 @@ a {
   font-weight: bold;
 }
 
+.my-line-height {
+  line-height: 2.325rem;
+}
+
 .my-section-header {
   text-align: center;
 }
 
-.my-section-card {
+.my-card {
   border: 2px solid var(--my-color-border);
   contain: layout paint;
 }
@@ -62,6 +67,38 @@ a {
 .my-btn {
   background-color: var(--my-color-btn);
   border-color:     var(--my-color-btn);
+}
+
+.my-contact-form-label {
+  padding-bottom: 0.5rem;
+}
+
+.my-contact-form-input {
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+
+  background-color: var(--my-color-input);
+  border: 2px solid var(--my-color-border);
+}
+
+.my-contact-form-input:focus {
+  background-color: var(--my-color-focus);
+}
+
+.my-error-msg {
+  margin-left: 1rem;
+  color: hsl(0, 100%, 50%);
+}
+
+#my-footer-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.my-contact-link {
+  width: 14rem;
 }
 
 /**************************************************
@@ -81,28 +118,32 @@ nav,
 
 .card-header,
 .card-body,
-.card-footer {
+.card-footer,
+.my-contact-card,
+footer {
   padding: 1rem;
 }
 
-.my-section-card,
+.my-card,
 .card-header,
 .card-footer {
   background-color: var(--my-color-cards);
 }
 
-.my-section-card,
+.my-card,
 #my-more-projects-btn {
   margin-top: var(--my-even-spacing);
 }
 
-.my-section-card,
+.my-card,
+.my-contact-form-input,
 .my-img-border-radius {
   border-radius: 0.5rem;
 }
 
 #hero,
-#projects {
+#projects,
+#contact {
   background-color: var(--my-color-hero);
   box-shadow:
     25vw 0 var(--my-color-hero),
@@ -120,11 +161,6 @@ nav,
   border-color:     var(--my-color-nav-hover);
 }
 
-.my-main-btn:hover {
-  background-color: var(--my-color-btn-hover);
-  border-color:     var(--my-color-btn-hover);
-}
-
 /**************************************************
 * MEDIA QUERIES
 **************************************************/
@@ -139,7 +175,17 @@ nav,
 }
 
 /* Medium */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  #my-footer-container {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  .my-contact-link {
+    width: auto;
+    margin: 0 1.625rem;
+  }
+}
 
 /* Large */
 @media (min-width: 992px) {
@@ -151,10 +197,14 @@ nav,
   /* When there are 2n projects */
   .my-project-card                {width: calc(50% - (var(--my-even-spacing) / 2))}
   .my-project-card:nth-child(odd) {margin-right: var(--my-even-spacing)}
+
+  .my-card{max-width: 50rem}
+
+  .my-contact-link {margin: 0 4rem}
 }
 
 /* Extra large */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {.my-contact-link {margin: 0 6rem}}
 
 /* Extra extra large */
 @media (min-width: 1400px) {
@@ -167,4 +217,7 @@ nav,
   /* .my-project-card                   {width: calc(33.3% - ((2 * var(--my-even-spacing)) / 3))}
   .my-project-card:nth-child(odd)    {margin-right: 0}
   .my-project-card:nth-child(3n - 1) {margin-left: var(--my-even-spacing); margin-right: var(--my-even-spacing);} */
+
+
+  .my-contact-link {margin: 0 2rem}
 }
